@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d1c-hv-saJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller - Home-->
+        <scene sceneID="NFX-jK-iaX">
+            <objects>
+                <viewController title="Home" id="d1c-hv-saJ" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8cp-Kz-Gyf"/>
+                        <viewControllerLayoutGuide type="bottom" id="hjY-vA-JMI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P9J-24-Zdc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HomeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Yfa-H7-3Lg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sky Snapper" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="aJE-Ut-wke">
+                                <rect key="frame" x="20" y="71" width="280" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOY-Tk-ctn">
+                                <rect key="frame" x="20" y="508" width="280" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Snap Now" backgroundImage="WhiteSquare"/>
+                                <connections>
+                                    <segue destination="la4-px-DwD" kind="push" id="AAb-fB-GkO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXd-Wz-MLr">
+                                <rect key="frame" x="20" y="460" width="280" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Learn More" backgroundImage="WhiteSquare"/>
+                                <connections>
+                                    <segue destination="weA-Qv-r1b" kind="push" id="YUY-ed-SjA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="snapButton" destination="wOY-Tk-ctn" id="jdk-vd-2V9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mHZ-BY-ykm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8" y="-66"/>
+        </scene>
+        <!--View Controller - Snap Picture-->
+        <scene sceneID="3U4-dm-n5p">
+            <objects>
+                <viewController title="Snap Picture" id="la4-px-DwD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0m9-Wv-Ama"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zao-eW-V8Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CrC-ZU-evF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mw4-b7-YJV">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="aCM-OH-btf"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="9Vp-Xi-gVa" kind="push" identifier="UploadPictureSegue" id="6CG-3e-KQH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6RR-VW-L2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="455" y="-65"/>
+        </scene>
+        <!--View Controller - Sky Snapper-->
+        <scene sceneID="Bcm-gb-tim">
+            <objects>
+                <viewController id="weA-Qv-r1b" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ei9-NK-6dM"/>
+                        <viewControllerLayoutGuide type="bottom" id="YAb-xW-zUO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mct-xY-xwN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sky Snapper" id="WHd-zN-D39">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="gRq-Fk-J7M"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kal-Bs-yxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="694"/>
+        </scene>
+        <!--View Controller - Uploading-->
+        <scene sceneID="hDa-mR-65e">
+            <objects>
+                <viewController title="Uploading" id="9Vp-Xi-gVa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H4O-Ry-nqE"/>
+                        <viewControllerLayoutGuide type="bottom" id="XOI-Fa-5gV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vll-G4-ijc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5cv-Hd-dJV">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="fRF-Ev-aSG"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Apn-Uz-N6h" kind="push" identifier="ResultSegue" id="ool-3B-6sh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rEU-oq-Z1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915" y="-65"/>
+        </scene>
+        <!--View Controller - Result-->
+        <scene sceneID="7fR-5Y-emV">
+            <objects>
+                <viewController title="Result" id="Apn-Uz-N6h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dme-og-lWc"/>
+                        <viewControllerLayoutGuide type="bottom" id="xHF-gM-xDR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Llg-v1-90i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DG6-UP-XcQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7U-wq-POH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1377" y="-65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="HomeBackground" width="640" height="1136"/>
+        <image name="WhiteSquare" width="20" height="20"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
