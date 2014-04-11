@@ -461,6 +461,7 @@
 				AED6542018F8938E003DC239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AED6542118F8938E003DC239 /* Build configuration list for PBXNativeTarget "Sky SnapperTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +470,7 @@
 				AED6542318F8938E003DC239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
