@@ -1,0 +1,1 @@
+Folder for the Sky Snapper iOS App.
