@@ -26,6 +26,10 @@ h1 a, h1 a:hover, h1 a:link {
    
 }
 
+.header-section.colours-page {
+	background-image:url('../images/sky3.jpg');
+}
+
 .header-section .navbar-default {
 	background:none;
 	border:none;
@@ -64,6 +68,11 @@ h1 a, h1 a:hover, h1 a:link {
 .header-section .navbar-nav li.call-to-action {
 	background:#2ecc71;
 	border-color:#2ecc71;
+}
+
+.header-section .navbar-nav li.action-button {
+	background:#e74c3c;
+	border-color:#e74c3c;
 }
 
 .header-section .navbar-nav li.active>a:link, .header-section .navbar-nav li.active>a, .header-section .navbar-nav li.active>a:hover {
@@ -131,4 +140,49 @@ footer {
 	padding-top:6px;
 	margin-top:20px;
 	padding-bottom:40px;
+}
+
+.colour-row h3 {
+	margin-top:0;
+	padding-top:0;
+	color:inherit !important;
+}
+
+.colour-row h3#deepblue {
+	color:rgb(128, 149, 255);
+}
+
+.colour-row h3#clearblue {
+	color:rgb(165, 181, 255);
+}
+
+.colour-row h3#lightblue {
+	color:rgb(192, 208, 255);
+	color:white;
+}
+
+.colourbox {
+	height:64px;
+	width:64px;
+}
+
+.colourbox#deepblue {
+	background:rgb(128, 149, 255);
+}
+
+.colourbox#clearblue {
+	background:rgb(165, 181, 255);
+}
+
+.colourbox#lightblue {
+	background:rgb(192, 208, 255);
+}
+
+.colourbox#paleblue {
+	background:rgb(219, 230, 255);
+}
+
+.colourbox#milky {
+	background:rgb(244, 252, 255);
+	border:1px solid grey;
 }

@@ -44,7 +44,7 @@
                                 <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOY-Tk-ctn">
-                                <rect key="frame" x="20" y="477" width="280" height="40"/>
+                                <rect key="frame" x="20" y="467" width="280" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Snap Now" backgroundImage="WhiteSquare"/>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXd-Wz-MLr">
-                                <rect key="frame" x="20" y="429" width="280" height="40"/>
+                                <rect key="frame" x="20" y="409" width="280" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Learn More" backgroundImage="WhiteSquare"/>
@@ -69,16 +69,17 @@
                     <connections>
                         <outlet property="backgroundImage" destination="Yfa-H7-3Lg" id="rxE-nZ-bCG"/>
                         <outlet property="snapButton" destination="wOY-Tk-ctn" id="jdk-vd-2V9"/>
+                        <segue destination="la4-px-DwD" kind="push" identifier="UploadSegue" id="0ZE-yc-uen"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHZ-BY-ykm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8" y="-66"/>
         </scene>
-        <!--View Controller - Snap Picture-->
+        <!--Upload View Controller - Snap Picture-->
         <scene sceneID="3U4-dm-n5p">
             <objects>
-                <viewController title="Snap Picture" id="la4-px-DwD" sceneMemberID="viewController">
+                <viewController title="Snap Picture" id="la4-px-DwD" customClass="UploadViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0m9-Wv-Ama"/>
                         <viewControllerLayoutGuide type="bottom" id="Zao-eW-V8Y"/>
@@ -86,18 +87,104 @@
                     <view key="view" contentMode="scaleToFill" id="CrC-ZU-evF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yNz-z7-eBA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8y-Pc-yBK">
+                                <rect key="frame" x="20" y="248" width="280" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="P0s-fo-S3X">
+                                        <rect key="frame" x="65" y="20" width="150" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </progressView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Uploading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXR-CW-ZU0">
+                                        <rect key="frame" x="65" y="30" width="150" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.69999998809999997" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Mw4-b7-YJV">
+                    <navigationItem key="navigationItem" title="Uploading..." id="Mw4-b7-YJV">
                         <barButtonItem key="backBarButtonItem" title="Back" id="aCM-OH-btf"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="9Vp-Xi-gVa" kind="push" identifier="UploadPictureSegue" id="6CG-3e-KQH"/>
+                        <outlet property="progressView" destination="P0s-fo-S3X" id="283-HU-Rim"/>
+                        <outlet property="uploadImageView" destination="yNz-z7-eBA" id="Wku-Dl-Eis"/>
+                        <segue destination="7Sx-zV-fNU" kind="push" identifier="ResultSegue" id="hzA-zv-kc7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RR-VW-L2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="455" y="-65"/>
+        </scene>
+        <!--Result View Controller - Result-->
+        <scene sceneID="tiW-2V-iz5">
+            <objects>
+                <viewController title="Result" id="7Sx-zV-fNU" customClass="ResultViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yvU-jg-XYF"/>
+                        <viewControllerLayoutGuide type="bottom" id="MGC-EI-oSd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f1o-XF-k1L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aa8-2z-GeI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HHH-9z-2J8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your sky is..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VQ-g5-2Gr">
+                                        <rect key="frame" x="20" y="95" width="280" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dark Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92F-IE-Zgl">
+                                        <rect key="frame" x="20" y="130" width="280" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="That's good. You should go to the park and relax with an ice cream. No reason to be indoors on a day like this!" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="0iP-u8-B6W">
+                                        <rect key="frame" x="20" y="167" width="280" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.69999998807907104" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Result" id="CM8-kI-B2g">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="Sur-k9-KHf">
+                            <connections>
+                                <segue destination="UxW-pa-ShR" kind="unwind" unwindAction="unwindToHome:" id="CNK-Kg-nuS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="aa8-2z-GeI" id="kSC-HA-Cx1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXl-HH-LW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UxW-pa-ShR" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="-65"/>
         </scene>
         <!--View Controller - Sky Snapper-->
         <scene sceneID="Bcm-gb-tim">
@@ -131,49 +218,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oE7-N9-T5j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="455" y="-809"/>
-        </scene>
-        <!--View Controller - Uploading-->
-        <scene sceneID="hDa-mR-65e">
-            <objects>
-                <viewController title="Uploading" id="9Vp-Xi-gVa" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="H4O-Ry-nqE"/>
-                        <viewControllerLayoutGuide type="bottom" id="XOI-Fa-5gV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vll-G4-ijc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="5cv-Hd-dJV">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="fRF-Ev-aSG"/>
-                    </navigationItem>
-                    <connections>
-                        <segue destination="Apn-Uz-N6h" kind="push" identifier="ResultSegue" id="ool-3B-6sh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rEU-oq-Z1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="915" y="-65"/>
-        </scene>
-        <!--View Controller - Result-->
-        <scene sceneID="7fR-5Y-emV">
-            <objects>
-                <viewController title="Result" id="Apn-Uz-N6h" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dme-og-lWc"/>
-                        <viewControllerLayoutGuide type="bottom" id="xHF-gM-xDR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Llg-v1-90i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="DG6-UP-XcQ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7U-wq-POH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1377" y="-65"/>
         </scene>
     </scenes>
     <resources>

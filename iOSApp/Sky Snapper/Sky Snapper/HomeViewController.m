@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 
-#import <QuartzCore/QuartzCore.h>
+#import "UploadViewController.h"
 
 @interface HomeViewController ()
 
@@ -30,11 +30,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    //snapButton.layer.borderColor = [UIColor whiteColor].CGColor;
-    //snapButton.layer.backgroundColor = [UIColor whiteColor].CGColor;
-    //snapButton.layer.borderWidth = 1.0;
-    //snapButton.layer.cornerRadius = 10;
 }
 
 NSTimer* backgroundAnimationTimer;
@@ -72,6 +67,10 @@ NSTimer* backgroundAnimationTimer;
          pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
          pickerController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
          pickerController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+     } else if ([segue.identifier isEqualToString:@"UploadSegue"]) {
+         NSLog(@"Uploading");
+         UploadViewController* uploadController = segue.destinationViewController;
+         uploadController.uploadImage = chosenImage;
      }
  }
 
@@ -94,6 +93,19 @@ bool reverseAnimate = NO;
         }
     }
     self.backgroundImage.frame = imageFrame;
+}
+
+UIImage* chosenImage = nil;
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    NSLog(@"Photo chosen");
+    chosenImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [self performSegueWithIdentifier:@"UploadSegue" sender:nil];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction) unwindToHome:(UIStoryboardSegue*)unwindSegue {
+    NSLog(@"Unwound");
 }
 
 @end

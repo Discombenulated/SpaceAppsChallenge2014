@@ -50,5 +50,4 @@ public class RestApi extends HttpServlet {
 		LOGGER.info(api.toJSONString());
 		JSON.sendJson(response, 200, api);
 	}
-	
 }
