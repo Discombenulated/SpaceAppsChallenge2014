@@ -59,7 +59,6 @@
                                 <state key="normal" title="Learn More" backgroundImage="WhiteSquare"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="d1c-hv-saJ" eventType="touchUpInside" id="xmg-IC-GVj"/>
-                                    <segue destination="weA-Qv-r1b" kind="push" id="YUY-ed-SjA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -186,27 +185,6 @@
                 <exit id="UxW-pa-ShR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="955" y="-65"/>
-        </scene>
-        <!--View Controller - Sky Snapper-->
-        <scene sceneID="Bcm-gb-tim">
-            <objects>
-                <viewController id="weA-Qv-r1b" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ei9-NK-6dM"/>
-                        <viewControllerLayoutGuide type="bottom" id="YAb-xW-zUO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Mct-xY-xwN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Sky Snapper" id="WHd-zN-D39">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="gRq-Fk-J7M"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kal-Bs-yxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="457" y="694"/>
         </scene>
         <!--Image Picker Controller-->
         <scene sceneID="75q-8w-kuX">

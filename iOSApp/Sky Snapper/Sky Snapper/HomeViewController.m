@@ -84,9 +84,11 @@ UIImage* chosenImage = nil;
 
 - (IBAction)buttonPressed:(id)sender {
     
-    UIViewController *otherVC = [[UIStoryboard storyboardWithName:@"Learning_iPhone" bundle:nil] instantiateInitialViewController]; //Or get a VC by its identifier
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Learning_iPhone" bundle:nil];
+    UIViewController* initialHelpView = [storyboard instantiateInitialViewController];
     
-    [self.navigationController pushViewController:otherVC animated:YES];
+    initialHelpView.modalPresentationStyle = UIModalPresentationFormSheet;
+    [self presentModalViewController:initialHelpView animated:YES];
 }
 
 @end

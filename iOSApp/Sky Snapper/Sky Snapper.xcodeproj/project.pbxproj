@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5277EF1E18F9C1C2006BE2F3 /* Learning_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5277EF1D18F9C1C2006BE2F3 /* Learning_iPhone.storyboard */; };
 		5277EF2418F9D51D006BE2F3 /* BaseAnimatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277EF2318F9D51D006BE2F3 /* BaseAnimatedViewController.m */; };
+		5277EF2F18F9EE64006BE2F3 /* ThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277EF2E18F9EE64006BE2F3 /* ThemeController.m */; };
 		AE23810318F977900080497E /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810218F977900080497E /* UploadViewController.m */; };
 		AE23810718F990870080497E /* SkyScannerWS.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810618F990870080497E /* SkyScannerWS.m */; };
 		AE23810A18F998800080497E /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810918F998800080497E /* ResultViewController.m */; };
@@ -43,6 +44,8 @@
 		5277EF1D18F9C1C2006BE2F3 /* Learning_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Learning_iPhone.storyboard; sourceTree = "<group>"; };
 		5277EF2218F9D51D006BE2F3 /* BaseAnimatedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAnimatedViewController.h; sourceTree = "<group>"; };
 		5277EF2318F9D51D006BE2F3 /* BaseAnimatedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAnimatedViewController.m; sourceTree = "<group>"; };
+		5277EF2D18F9EE64006BE2F3 /* ThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeController.h; sourceTree = "<group>"; };
+		5277EF2E18F9EE64006BE2F3 /* ThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeController.m; sourceTree = "<group>"; };
 		AE23810118F977900080497E /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
 		AE23810218F977900080497E /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
 		AE23810518F990870080497E /* SkyScannerWS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerWS.h; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 		5277EF2918F9D608006BE2F3 /* ThemeView */ = {
 			isa = PBXGroup;
 			children = (
+				5277EF2D18F9EE64006BE2F3 /* ThemeController.h */,
+				5277EF2E18F9EE64006BE2F3 /* ThemeController.m */,
 			);
 			name = ThemeView;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				AED6540618F8938E003DC239 /* AppDelegate.m in Sources */,
 				AE23810318F977900080497E /* UploadViewController.m in Sources */,
 				AE23810718F990870080497E /* SkyScannerWS.m in Sources */,
+				5277EF2F18F9EE64006BE2F3 /* ThemeController.m in Sources */,
 				AED6540218F8938E003DC239 /* main.m in Sources */,
 				AED6542B18F89DB4003DC239 /* HomeViewController.m in Sources */,
 				AE23810A18F998800080497E /* ResultViewController.m in Sources */,
