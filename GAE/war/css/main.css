@@ -6,7 +6,8 @@ body {
 	margin-top:none;
 }
 
-.edge {
+a {
+	color:#2ecc71;
 }
 
 .header-section {
@@ -50,6 +51,8 @@ body {
 .header-section .navbar-nav li>a {
 	line-height:12px;
 	color:white;
+	padding-left:20px;
+	padding-right:20px;
 }
 
 .header-section .navbar-nav li.call-to-action {
@@ -88,4 +91,38 @@ body {
 	font-weight:bold;
 	border-width:2px;
 	float:left;
+}
+
+dl.what-to-do {
+	background:#ecf0f1;
+	counter-reset: the-counter;
+}
+
+dl.what-to-do dt {
+	padding:20px 0;
+	border-bottom:3px solid #7f8c8d;
+	padding-left:55px;
+	font-size:22px;
+	vertical-align:text-middle;
+	position:relative;
+}
+
+dl.what-to-do dt:before {
+	content: counter(the-counter);
+	counter-increment: the-counter;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight:400;
+	color:#2980b9;
+	padding-right:6px;
+	font-size:48px;
+	position:absolute;
+	left:15px;
+	top:0;
+}
+
+footer {
+	border-top:1px solid #7f8c8d;
+	padding-top:6px;
+	margin-top:20px;
+	padding-bottom:40px;
 }
