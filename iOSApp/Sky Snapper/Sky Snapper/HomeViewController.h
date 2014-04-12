@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController <UIImagePickerControllerDelegate>
 @property (nonatomic, strong) IBOutlet UIButton* snapButton;
+@property (nonatomic, strong) IBOutlet UIImageView* backgroundImage;
 @end
