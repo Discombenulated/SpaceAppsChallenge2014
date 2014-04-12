@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,8 +18,6 @@ import net.skysnapper.services.SnapperService;
 import com.google.appengine.api.blobstore.BlobstoreService;
 import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
 import com.google.appengine.api.blobstore.FileInfo;
-import com.google.appengine.api.users.User;
-import com.google.appengine.api.users.UserServiceFactory;
 
 /**
  * @author LONJS43
@@ -30,10 +29,12 @@ public class UploadPhotoServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 5849138160369202006L;
 	
+	private static final Logger LOGGER = Logger.getLogger(UploadPhotoServlet.class.getName());
+	
 	/**
 	 * Registers Objectify classes
 	 */
-	static SnapperService photoPostService = SnapperService
+	static SnapperService snapperService = SnapperService
 			.getInstance();
 
 	@Override
@@ -49,11 +50,14 @@ public class UploadPhotoServlet extends HttpServlet {
 
 		Collection<List<FileInfo>> entries = blobs.values();
 
+		LOGGER.info("BLOBS: " + entries.size());
+		
 		for (List<FileInfo> filedeets : entries) {
 			for (FileInfo myfileinfo : filedeets) {
 				String gsFileName = myfileinfo.getGsObjectName();
+				LOGGER.info(gsFileName);
 				if (myfileinfo.getSize() > 0)
-					photoPostService.createNewPost(title, gsFileName);
+					snapperService.createNewPost(title, gsFileName);
 			}
 		}
 

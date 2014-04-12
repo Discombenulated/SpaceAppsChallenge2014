@@ -23,7 +23,9 @@
 
 	String uploadUrl = blobstore
 			.createUploadUrl(
-					"/photouploadcallback");
+					"/photouploadcallback",
+					UploadOptions.Builder
+					.withGoogleStorageBucketName("sky-snapper.appspot.com"));
 %>
 <div class="row">
 	<div class="col-md-12">
