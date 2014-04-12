@@ -23,7 +23,19 @@
 <jsp:include page="<%= JSPs.CONTENT_START %>"></jsp:include>
 
 <div class="col-md-7 edge">
+		<h2>Snaps from around the world</h2>
 		<div id="map-canvas" class=" homepage-map"></div>
+		
+		<h2>What is SkySnapper</h2>
+		<p>
+			SkySnapper is a .....
+		</p>
+		
+		<h2>Get involved</h2>
+		<p>
+			<a href="#" class="appstore-link" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png) no-repeat;width:135px;height:40px;@media only screen{background-image:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg);}"></a>
+			<a href="#" class="btn btn-default btn-skysnapper">Developer Guide</a>
+		</p>
 </div>
 
 <div class="col-md-5">
