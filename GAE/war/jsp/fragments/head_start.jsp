@@ -9,3 +9,5 @@
 		
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="/css/main.css" />
+		<script type="text/javascript" src="/javascript/jquery.min.js"></script>
+		<script type="text/javascript" src="/javascript/snapper.js"></script>

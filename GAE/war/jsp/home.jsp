@@ -11,14 +11,14 @@
     
     var overlay = null;
     SnapperOverlay.prototype = new google.maps.OverlayView();
-    
-    
+    window.map = null;
+    window.marker_hover = null;
       function initialize() {
         var mapOptions = {
         		zoom: 1,
         	    center: new google.maps.LatLng(0, 0),
         };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
+        window.map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
         var srcImage = "http://localhost:8888/images/maps-overlay.png";
         
@@ -100,7 +100,7 @@
 		<h2>Sky colour worldwide snapshot</h2>
 		<div id="map-canvas" class=" homepage-map"></div>
 		
-		<h3>What is SkySnapper <small>Crowd-sourcing Climate Change</small></h3>
+		<h3>What is SkySnapper? <small>Crowd-sourcing Climate Change</small></h3>
 		<p>
 			<dl class="what-to-do">
 				<dt>Take a picture of the sky with our <a href="#">app</a></dt>
@@ -119,10 +119,32 @@
 <div class="col-md-5">
 	<h2>Recently snapped</h2>
 	<div class="recently-snapped">
-		<div class="recent-snap">
-			<img class="img-thumbnail" />
+		<div class="recent-snap" data-latitude="49.435985" data-longitude="12.128906">
+			<img class="img-thumbnail" src="/images/recentsnaps/recentsnap1.jpg "/>
+			<div class="at">at <span class="pre">49.435985, 12.128906</span>. Classification: <a href="#">Dark Blue</a>
+			</div>
+		</div>
+		
+		<div class="recent-snap" data-latitude="36.945502" data-longitude="-93.691406">
+			<img class="img-thumbnail" src="/images/recentsnaps/recentsnap1.jpg "/>
+			<div class="at">at <span class="pre">36.945502, -93.691406</span>. Classification: <a href="#">Dark Blue</a>
+			</div>
 		</div>
 	</div>
 </div>
 
+<script type="text/javascript">
+	$(".recent-snap").hover(function(e) {
+		if (null != window.map) {
+			window.marker_hover = new google.maps.Marker({
+				position: new google.maps.LatLng($(this).data("latitude"), $(this).data("longitude")),
+				map:window.map,
+			});
+		}
+	}, function(e) {
+		if (null != window.marker_hover) {
+			window.marker_hover.setMap(null);
+		}
+	});
+</script>
 <jsp:include page="<%= JSPs.FOOTER %>"></jsp:include>
