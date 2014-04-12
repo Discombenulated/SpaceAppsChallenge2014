@@ -11,7 +11,6 @@ public class HomeServlet extends HttpServlet {
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) {
 		try {
-			
 			req.getRequestDispatcher(JSPs.HOME).forward(req, resp);
 			
 		} catch (Exception e) {

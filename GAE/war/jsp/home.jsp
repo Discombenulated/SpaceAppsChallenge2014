@@ -23,11 +23,28 @@
 <jsp:include page="<%= JSPs.CONTENT_START %>"></jsp:include>
 
 <div class="col-md-7 edge">
+		<h2>Snaps from around the world</h2>
 		<div id="map-canvas" class=" homepage-map"></div>
+		
+		<h3>What is SkySnapper <small>Crowd-sourcing Climate Change</small></h3>
+		<p>
+			<dl class="what-to-do">
+				<dt>Take a picture of the sky with our <a href="#">app</a></dt>
+				<dt>We analyse the image for signs of air pollution</dt>
+				<dt>Your snaps help us gather data to beat climate change</dt>
+			</dl>
+		</p>
+		
+		<h3>Get involved</h3>
+		<p>
+			<a href="#" class="appstore-link" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png) no-repeat;width:135px;height:40px;@media only screen{background-image:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg);}"></a>
+			<a href="#" class="btn btn-default btn-skysnapper">Developer Guide</a>
+		</p>
 </div>
 
 <div class="col-md-5">
-	<h2></h2>
+	<h2>Recently snapped</h2>
+	<p>Images will go here...</p>
 </div>
 
 <jsp:include page="<%= JSPs.FOOTER %>"></jsp:include>
