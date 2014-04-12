@@ -16,6 +16,10 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>restApi</servlet-name>
 		<servlet-class>net.skysnapper.servlets.RestApi</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>photoUpload</servlet-name>
+		<servlet-class>net.skysnapper.servlets.UploadPhotoServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>photoUpload</servlet-name>
 		<url-pattern>/photouploadcallback</url-pattern>
