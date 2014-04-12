@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zdJ-pF-WDz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zdJ-pF-WDz">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -58,7 +58,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Learn More" backgroundImage="WhiteSquare"/>
                                 <connections>
-                                    <segue destination="weA-Qv-r1b" kind="push" id="YUY-ed-SjA"/>
+                                    <action selector="buttonPressed:" destination="d1c-hv-saJ" eventType="touchUpInside" id="xmg-IC-GVj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,7 +67,7 @@
                     <navigationItem key="navigationItem" id="JIc-dh-TP0"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="backgroundImage" destination="Yfa-H7-3Lg" id="rxE-nZ-bCG"/>
+                        <outlet property="backgroundImage" destination="Yfa-H7-3Lg" id="CDw-TC-GQl"/>
                         <outlet property="snapButton" destination="wOY-Tk-ctn" id="jdk-vd-2V9"/>
                         <segue destination="la4-px-DwD" kind="push" identifier="UploadSegue" id="0ZE-yc-uen"/>
                     </connections>
@@ -185,27 +185,6 @@
                 <exit id="UxW-pa-ShR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="955" y="-65"/>
-        </scene>
-        <!--View Controller - Sky Snapper-->
-        <scene sceneID="Bcm-gb-tim">
-            <objects>
-                <viewController id="weA-Qv-r1b" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ei9-NK-6dM"/>
-                        <viewControllerLayoutGuide type="bottom" id="YAb-xW-zUO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Mct-xY-xwN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Sky Snapper" id="WHd-zN-D39">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="gRq-Fk-J7M"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kal-Bs-yxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="457" y="694"/>
         </scene>
         <!--Image Picker Controller-->
         <scene sceneID="75q-8w-kuX">

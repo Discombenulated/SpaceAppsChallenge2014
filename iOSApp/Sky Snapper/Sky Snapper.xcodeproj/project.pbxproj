@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5277EF1E18F9C1C2006BE2F3 /* Learning_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5277EF1D18F9C1C2006BE2F3 /* Learning_iPhone.storyboard */; };
+		5277EF2418F9D51D006BE2F3 /* BaseAnimatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277EF2318F9D51D006BE2F3 /* BaseAnimatedViewController.m */; };
+		5277EF2F18F9EE64006BE2F3 /* ThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277EF2E18F9EE64006BE2F3 /* ThemeController.m */; };
 		AE23810318F977900080497E /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810218F977900080497E /* UploadViewController.m */; };
-		AE23810718F990870080497E /* SkyScannerWS.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810618F990870080497E /* SkyScannerWS.m */; };
+		AE23810718F990870080497E /* SkySnapperWS.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810618F990870080497E /* SkySnapperWS.m */; };
 		AE23810A18F998800080497E /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810918F998800080497E /* ResultViewController.m */; };
 		AED653F618F8938E003DC239 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED653F518F8938E003DC239 /* Foundation.framework */; };
 		AED653F818F8938E003DC239 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED653F718F8938E003DC239 /* CoreGraphics.framework */; };
@@ -38,10 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5277EF1D18F9C1C2006BE2F3 /* Learning_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Learning_iPhone.storyboard; sourceTree = "<group>"; };
+		5277EF2218F9D51D006BE2F3 /* BaseAnimatedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAnimatedViewController.h; sourceTree = "<group>"; };
+		5277EF2318F9D51D006BE2F3 /* BaseAnimatedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAnimatedViewController.m; sourceTree = "<group>"; };
+		5277EF2D18F9EE64006BE2F3 /* ThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeController.h; sourceTree = "<group>"; };
+		5277EF2E18F9EE64006BE2F3 /* ThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeController.m; sourceTree = "<group>"; };
 		AE23810118F977900080497E /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
 		AE23810218F977900080497E /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
-		AE23810518F990870080497E /* SkyScannerWS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerWS.h; sourceTree = "<group>"; };
-		AE23810618F990870080497E /* SkyScannerWS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerWS.m; sourceTree = "<group>"; };
+		AE23810518F990870080497E /* SkySnapperWS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkySnapperWS.h; sourceTree = "<group>"; };
+		AE23810618F990870080497E /* SkySnapperWS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkySnapperWS.m; sourceTree = "<group>"; };
 		AE23810818F998800080497E /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		AE23810918F998800080497E /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		AED653F218F8938E003DC239 /* Sky Snapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sky Snapper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,11 +99,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5277EF1F18F9D49E006BE2F3 /* LearningIsFun */ = {
+			isa = PBXGroup;
+			children = (
+				5277EF2C18F9D637006BE2F3 /* Pollution */,
+				5277EF2B18F9D62A006BE2F3 /* TechnicalTheme */,
+				5277EF2A18F9D617006BE2F3 /* ColoursView */,
+				5277EF1D18F9C1C2006BE2F3 /* Learning_iPhone.storyboard */,
+				5277EF2818F9D601006BE2F3 /* BaseView */,
+				5277EF2918F9D608006BE2F3 /* ThemeView */,
+			);
+			name = LearningIsFun;
+			sourceTree = "<group>";
+		};
+		5277EF2818F9D601006BE2F3 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				5277EF2218F9D51D006BE2F3 /* BaseAnimatedViewController.h */,
+				5277EF2318F9D51D006BE2F3 /* BaseAnimatedViewController.m */,
+			);
+			name = BaseView;
+			sourceTree = "<group>";
+		};
+		5277EF2918F9D608006BE2F3 /* ThemeView */ = {
+			isa = PBXGroup;
+			children = (
+				5277EF2D18F9EE64006BE2F3 /* ThemeController.h */,
+				5277EF2E18F9EE64006BE2F3 /* ThemeController.m */,
+			);
+			name = ThemeView;
+			sourceTree = "<group>";
+		};
+		5277EF2A18F9D617006BE2F3 /* ColoursView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ColoursView;
+			sourceTree = "<group>";
+		};
+		5277EF2B18F9D62A006BE2F3 /* TechnicalTheme */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TechnicalTheme;
+			sourceTree = "<group>";
+		};
+		5277EF2C18F9D637006BE2F3 /* Pollution */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pollution;
+			sourceTree = "<group>";
+		};
 		AE23810418F990350080497E /* WebService */ = {
 			isa = PBXGroup;
 			children = (
-				AE23810518F990870080497E /* SkyScannerWS.h */,
-				AE23810618F990870080497E /* SkyScannerWS.m */,
+				AE23810518F990870080497E /* SkySnapperWS.h */,
+				AE23810618F990870080497E /* SkySnapperWS.m */,
 			);
 			name = WebService;
 			sourceTree = "<group>";
@@ -183,6 +243,7 @@
 				AE23810218F977900080497E /* UploadViewController.m */,
 				AE23810818F998800080497E /* ResultViewController.h */,
 				AE23810918F998800080497E /* ResultViewController.m */,
+				5277EF1F18F9D49E006BE2F3 /* LearningIsFun */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -265,6 +326,7 @@
 				AED6540018F8938E003DC239 /* InfoPlist.strings in Resources */,
 				AED6542618F899AA003DC239 /* Storyboard_iPhone.storyboard in Resources */,
 				AED6540818F8938E003DC239 /* Images.xcassets in Resources */,
+				5277EF1E18F9C1C2006BE2F3 /* Learning_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,9 +348,11 @@
 				AED6540618F8938E003DC239 /* AppDelegate.m in Sources */,
 				AE23810318F977900080497E /* UploadViewController.m in Sources */,
 				AE23810718F990870080497E /* SkyScannerWS.m in Sources */,
+				5277EF2F18F9EE64006BE2F3 /* ThemeController.m in Sources */,
 				AED6540218F8938E003DC239 /* main.m in Sources */,
 				AED6542B18F89DB4003DC239 /* HomeViewController.m in Sources */,
 				AE23810A18F998800080497E /* ResultViewController.m in Sources */,
+				5277EF2418F9D51D006BE2F3 /* BaseAnimatedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

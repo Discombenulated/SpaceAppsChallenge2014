@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SkyScannerWS : NSObject
+@interface SkySnapperWS : NSObject
 
 @end
