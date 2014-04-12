@@ -5,6 +5,8 @@ public interface Constants {
 	public interface RelativeURLs {
 		public static final String PHOTO_UPLOAD_CALLBACK = "/photouploadcallback";
 		
+		public static final String MOBILE_UPLOAD_CALLBACK = "/mobileuploadcallback";
+		
 		public static final String REST_API = "/restapi";
 	}
 

@@ -17,6 +17,7 @@ import net.skysnapper.util.Constants;
 
 import com.google.appengine.api.blobstore.*;
 import com.google.appengine.api.memcache.jsr107cache.GCacheFactory;
+import com.googlecode.objectify.Key;
 import com.googlecode.objectify.ObjectifyService;
 
 /**
@@ -54,9 +55,9 @@ public class SnapperService {
 				.iterable();
 	}
 
-	public void createNewPost(String title, String filename) {
+	public Key<PhotoPost> createNewPost(String title, String filename) {
 		PhotoPost photoPost = new PhotoPost(title, filename);
-		ofy().save().entity(photoPost);		
+		return ofy().save().entity(photoPost).now();		
 	}
 	
 	public String getPhotoUploadURL() {
@@ -65,6 +66,16 @@ public class SnapperService {
 
 		return blobstore
 				.createUploadUrl(Constants.RelativeURLs.PHOTO_UPLOAD_CALLBACK,
+						UploadOptions.Builder
+						.withGoogleStorageBucketName(Constants.GCS_BUCKET));
+	}
+	
+	public String getMobileUploadURL() {
+		BlobstoreService blobstore = BlobstoreServiceFactory
+				.getBlobstoreService();
+
+		return blobstore
+				.createUploadUrl(Constants.RelativeURLs.MOBILE_UPLOAD_CALLBACK,
 						UploadOptions.Builder
 						.withGoogleStorageBucketName(Constants.GCS_BUCKET));
 	}

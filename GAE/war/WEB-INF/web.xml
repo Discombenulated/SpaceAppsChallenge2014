@@ -5,8 +5,16 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
-		<servlet-name>photoUpload</servlet-name>
-		<servlet-class>net.skysnapper.servlets.UploadPhotoServlet</servlet-class>
+		<servlet-name>mobileUpload</servlet-name>
+		<servlet-class>net.skysnapper.servlets.MobileUploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>mobileUpload</servlet-name>
+		<url-pattern>/mobileuploadcallback</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>restApi</servlet-name>
+		<servlet-class>net.skysnapper.servlets.RestApi</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>photoUpload</servlet-name>
