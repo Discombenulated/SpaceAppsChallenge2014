@@ -225,3 +225,28 @@ footer {
 	margin-top:0;
 	padding-top:0;
 }
+
+#explore-maps-canvas {
+	width:100%;
+	border:1px solid black;
+}
+
+h2.sky-beautiful {
+	font-family:'Montserrat', sans-serif;
+	font-size:35px;
+}
+
+ul.dropdown-menu-form {
+    padding: 5px 10px 0;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+h4.explore-snag {
+	color:#e74c3c;
+}
+
+h4.explore-snag .btn {
+	border:1px solid #e74c3c;
+	color:#e74c3c;
+}
