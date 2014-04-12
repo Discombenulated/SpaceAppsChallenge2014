@@ -7,6 +7,5 @@ GAE/war/WEB-INF/classes/*
 # http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control?
 #
 # Pods/
-/GAE/.classpath
-/GAE/.settings/com.google.appengine.eclipse.core.prefs
-/.metadata
+GAE/.settings/com.google.appengine.eclipse.core.prefs
+.metadata
