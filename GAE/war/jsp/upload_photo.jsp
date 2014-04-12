@@ -41,6 +41,7 @@
 					<div class="col-md-12">
 						<h2 class="title"><%= post.getTitle() %></h2>
 						<h3><%= sdf.format(post.getTimestamp()) %></h3>
+						<h4><%= post.getId() %></h4>
 						<img class="thumbnail" src="<%= post.getURL() %>=s100" />
 					</div>
 				</div>
