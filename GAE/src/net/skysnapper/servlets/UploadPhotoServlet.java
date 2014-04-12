@@ -13,11 +13,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.skysnapper.entity.PhotoPost;
 import net.skysnapper.services.SnapperService;
 
 import com.google.appengine.api.blobstore.BlobstoreService;
 import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
 import com.google.appengine.api.blobstore.FileInfo;
+import com.googlecode.objectify.Key;
 
 /**
  * @author LONJS43
@@ -52,15 +54,22 @@ public class UploadPhotoServlet extends HttpServlet {
 
 		LOGGER.info("BLOBS: " + entries.size());
 		
+		Key<PhotoPost> photoPostKey = null;
+		
 		for (List<FileInfo> filedeets : entries) {
 			for (FileInfo myfileinfo : filedeets) {
 				String gsFileName = myfileinfo.getGsObjectName();
 				LOGGER.info(gsFileName);
-				if (myfileinfo.getSize() > 0)
-					snapperService.createNewPost(title, gsFileName);
+				if (myfileinfo.getSize() > 0) {
+					photoPostKey = snapperService.createNewPost(title, gsFileName);
+				}
 			}
 		}
 
+		postUpload(req, resp, photoPostKey);
+	}
+
+	protected void postUpload(HttpServletRequest req, HttpServletResponse resp, Key<PhotoPost> photoPostKey) throws IOException {
 		resp.sendRedirect("/");
 	}
 }

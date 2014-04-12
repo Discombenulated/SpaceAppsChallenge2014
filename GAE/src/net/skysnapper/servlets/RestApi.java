@@ -3,22 +3,16 @@
  */
 package net.skysnapper.servlets;
 
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServlet;
-
-
-
-
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.simple.JSONObject;
-
 import net.skysnapper.services.SnapperService;
 import net.skysnapper.util.JSON;
+
+import org.json.simple.JSONObject;
 
 
 /**
@@ -42,7 +36,7 @@ public class RestApi extends HttpServlet {
 		JSONObject api = new JSONObject();
 		JSONObject photoUpload = new JSONObject();
 		String apiName = "photoUpload";
-		photoUpload.put("uploadURL", snapperService.getPhotoUploadURL());
+		photoUpload.put("uploadURL", snapperService.getMobileUploadURL());
 		api.put(apiName, photoUpload);
 		LOGGER.info(api.toJSONString());
 		JSON.sendJson(response, 200, api);
