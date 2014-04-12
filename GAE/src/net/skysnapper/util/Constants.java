@@ -12,7 +12,15 @@ public interface Constants {
 		public static final String HTML5SIV = "/javascript/html5shiv-min.js";
 		
 		public static final String RESPOND_JS = "/javascript/respond-min.js";
+		
+		public static final String PHOTO_DATA_URL = "/photodata";
+	}
+	
+	public interface ParamNames {
+		public static final String PHOTO_KEY = "photoid";
 	}
 
 	public static final String GCS_BUCKET = "sky-snapper.appspot.com";
+	
+	
 }

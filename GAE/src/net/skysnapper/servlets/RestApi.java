@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import net.skysnapper.services.SnapperService;
+import net.skysnapper.util.Constants;
 import net.skysnapper.util.JSON;
 
 import org.json.simple.JSONObject;
@@ -34,12 +35,19 @@ public class RestApi extends HttpServlet {
 		SnapperService snapperService = SnapperService.getInstance();
 		
 		JSONObject api = new JSONObject();
+		
+		// photo upload api
 		JSONObject photoUpload = new JSONObject();
-		String apiName = "photoUpload";
 		photoUpload.put("uploadURL", snapperService.getMobileUploadURL());
-		api.put(apiName, photoUpload);
+		api.put("photoUpload", photoUpload);
+		
+		// photo data api
+		JSONObject photoData = new JSONObject();
+		photoData.put("dataURL", Constants.RelativeURLs.PHOTO_DATA_URL);
+		photoData.put("keyParamName", Constants.ParamNames.PHOTO_KEY);
+		api.put("photoData", photoData);
+		
 		LOGGER.info(api.toJSONString());
 		JSON.sendJson(response, 200, api);
 	}
-	
 }
