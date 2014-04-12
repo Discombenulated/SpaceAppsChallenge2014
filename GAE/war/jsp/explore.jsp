@@ -7,30 +7,10 @@
 
 <jsp:include page="<%= JSPs.END %>"></jsp:include>
 <jsp:include page="<%= JSPs.CONTENT_START %>">
-	<jsp:param value="dev-page" name="header-class"/>
+	<jsp:param value="explore-page" name="header-class"/>
 </jsp:include>
 
-<div class="row">
-<br />
-</div>
 
-<div class="col-md-3 panel panel-default">
-<div class="panel-body">
-	<h4>Getting started</h4>
-	<ul>
-		<li>Downloads</li>
-		<li>Installation</li>
-		<li></li>
-	</ul>
-	<h4>API Endpoints</h4>
-	<ul>
-		<li>API Structure</li>
-		<li>Queries</li>
-		<li>Responses</li>
-		<li>Submitting a snap</li>
-	</ul>
-	</div>
-</div>
 <div class="col-md-9">
 	<h2 class="pull-up">SkySnapper for Developers</h2>
 </div>
