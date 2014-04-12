@@ -39,7 +39,18 @@ public class RestApi extends HttpServlet {
 		// photo upload api
 		JSONObject photoUpload = new JSONObject();
 		photoUpload.put("uploadURL", snapperService.getMobileUploadURL());
+		photoUpload.put("testUploadURL", snapperService.getPhotoUploadURL());
+		
+		JSONObject params = new JSONObject();
+		params.put("takenTimestamp", "UNIX timestamp milliseconds since 1970");
+		params.put("lat", "float latitude");
+		params.put("lon", "float longitude");
+		params.put("compassDegrees", "float degrees");
+		params.put("inclinationDegrees", "float degrees");
+		photoUpload.put("parameters", params);
+		
 		api.put("photoUpload", photoUpload);
+		
 		
 		// photo data api
 		JSONObject photoData = new JSONObject();
