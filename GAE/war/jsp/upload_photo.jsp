@@ -18,14 +18,7 @@
 	SnapperService snapperService = SnapperService
 			.getInstance();
 
-	BlobstoreService blobstore = BlobstoreServiceFactory
-			.getBlobstoreService();
-
-	String uploadUrl = blobstore
-			.createUploadUrl(
-					"/photouploadcallback",
-					UploadOptions.Builder
-					.withGoogleStorageBucketName("sky-snapper.appspot.com"));
+	String uploadUrl = snapperService.getPhotoUploadURL();
 %>
 <div class="row">
 	<div class="col-md-12">
