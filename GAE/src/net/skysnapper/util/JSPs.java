@@ -11,5 +11,7 @@ public interface JSPs {
 	public static final String HOME = "/jsp/home.jsp";
 	
 	public static final String CONTENT_START = "/jsp/fragments/content_start.jsp";
+	
+	public static final String COLOURS = "/jsp/colours.jsp";
 
 }
