@@ -1,7 +1,10 @@
 <body>
 <div class="header-section">
 	<div class="container">
-		<h1>SkySnapper</h1>
+		<div class="col-md-12">
+			<h1><a href="/">SkySnapper</a></h1>
+		</div>
+		<div class="clearfix"></div>
 	<div class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -14,7 +17,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="/">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             
