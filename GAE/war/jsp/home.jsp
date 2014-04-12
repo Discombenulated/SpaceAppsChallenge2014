@@ -1,0 +1,1 @@
+<jsp:include page="fragments/head_start.jsp"></jsp:include>
