@@ -34,8 +34,8 @@ if (request.getParameter("header-class") != null) {
             
           </ul>
           <ul class="nav navbar-nav navbar-right">
-          <li class="action-button"><a href="#">Explore!</a></li>
-          <li class="call-to-action"><a href="#">For Developers</a></li>
+          <li class="action-button"><a href="/jsp/explore.jsp">Explore!</a></li>
+          <li class="call-to-action"><a href="/jsp/developers.jsp">For Developers</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

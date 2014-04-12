@@ -30,6 +30,14 @@ h1 a, h1 a:hover, h1 a:link {
 	background-image:url('../images/sky3.jpg');
 }
 
+.header-section.dev-page {
+	background-image:url('/images/sky4.jpg');
+}
+
+.header-section.explore-page {
+	background-image:url('/images/sky5.jpg');
+}
+
 .header-section .navbar-default {
 	background:none;
 	border:none;
@@ -67,12 +75,12 @@ h1 a, h1 a:hover, h1 a:link {
 
 .header-section .navbar-nav li.call-to-action {
 	background:#2ecc71;
-	border-color:#2ecc71;
+	border-color:white;
 }
 
 .header-section .navbar-nav li.action-button {
 	background:#e74c3c;
-	border-color:#e74c3c;
+	border-color:white;
 }
 
 .header-section .navbar-nav li.active>a:link, .header-section .navbar-nav li.active>a, .header-section .navbar-nav li.active>a:hover {
@@ -89,7 +97,7 @@ h1 a, h1 a:hover, h1 a:link {
 
 .homepage-map {
 	width:auto;
-	height:250px;
+	height:290px;
 }
 
 .appstore-link {
@@ -190,6 +198,7 @@ footer {
 .recent-snap {
 	border-bottom:1px solid #bdc3c7;
 	padding-bottom:5px;
+	margin-top:10px;
 }
 
 .recent-snap img {
@@ -200,8 +209,19 @@ footer {
 .at {
 	font-size:12px;
 	margin-top:3px;
+	margin-left:2px;
 }
 
 .pre {
 	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+.api-success {
+	color:#2ecc71;
+	font-weight:bold;
+}
+
+.pull-up {
+	margin-top:0;
+	padding-top:0;
 }
