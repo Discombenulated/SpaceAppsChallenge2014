@@ -5,12 +5,12 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
-		<servlet-name>Sky_snapper</servlet-name>
-		<servlet-class>net.skysnapper.Sky_snapperServlet</servlet-class>
+		<servlet-name>photoUpload</servlet-name>
+		<servlet-class>net.skysnapper.servlets.UploadPhotoServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Sky_snapper</servlet-name>
-		<url-pattern>/sky_snapper</url-pattern>
+		<servlet-name>photoUpload</servlet-name>
+		<url-pattern>/photouploadcallback</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>HomeServlet</servlet-name>
