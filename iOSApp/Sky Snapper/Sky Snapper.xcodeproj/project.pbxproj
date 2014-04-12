@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE23810318F977900080497E /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810218F977900080497E /* UploadViewController.m */; };
+		AE23810718F990870080497E /* SkyScannerWS.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810618F990870080497E /* SkyScannerWS.m */; };
+		AE23810A18F998800080497E /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810918F998800080497E /* ResultViewController.m */; };
 		AED653F618F8938E003DC239 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED653F518F8938E003DC239 /* Foundation.framework */; };
 		AED653F818F8938E003DC239 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED653F718F8938E003DC239 /* CoreGraphics.framework */; };
 		AED653FA18F8938E003DC239 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED653F918F8938E003DC239 /* UIKit.framework */; };
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE23810118F977900080497E /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
+		AE23810218F977900080497E /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
+		AE23810518F990870080497E /* SkyScannerWS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyScannerWS.h; sourceTree = "<group>"; };
+		AE23810618F990870080497E /* SkyScannerWS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyScannerWS.m; sourceTree = "<group>"; };
+		AE23810818F998800080497E /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		AE23810918F998800080497E /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		AED653F218F8938E003DC239 /* Sky Snapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sky Snapper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED653F518F8938E003DC239 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AED653F718F8938E003DC239 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE23810418F990350080497E /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				AE23810518F990870080497E /* SkyScannerWS.h */,
+				AE23810618F990870080497E /* SkyScannerWS.m */,
+			);
+			name = WebService;
+			sourceTree = "<group>";
+		};
 		AED653E918F8938E003DC239 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +134,7 @@
 		AED653FB18F8938E003DC239 /* Sky Snapper */ = {
 			isa = PBXGroup;
 			children = (
+				AE23810418F990350080497E /* WebService */,
 				AED6542418F8998D003DC239 /* UI */,
 				AED6540418F8938E003DC239 /* AppDelegate.h */,
 				AED6540518F8938E003DC239 /* AppDelegate.m */,
@@ -160,6 +179,10 @@
 				AED6542518F899AA003DC239 /* Storyboard_iPhone.storyboard */,
 				AED6542918F89DB4003DC239 /* HomeViewController.h */,
 				AED6542A18F89DB4003DC239 /* HomeViewController.m */,
+				AE23810118F977900080497E /* UploadViewController.h */,
+				AE23810218F977900080497E /* UploadViewController.m */,
+				AE23810818F998800080497E /* ResultViewController.h */,
+				AE23810918F998800080497E /* ResultViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -261,8 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AED6540618F8938E003DC239 /* AppDelegate.m in Sources */,
+				AE23810318F977900080497E /* UploadViewController.m in Sources */,
+				AE23810718F990870080497E /* SkyScannerWS.m in Sources */,
 				AED6540218F8938E003DC239 /* main.m in Sources */,
 				AED6542B18F89DB4003DC239 /* HomeViewController.m in Sources */,
+				AE23810A18F998800080497E /* ResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

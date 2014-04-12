@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController <UIImagePickerControllerDelegate>
+@interface HomeViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic, strong) IBOutlet UIButton* snapButton;
 @property (nonatomic, strong) IBOutlet UIImageView* backgroundImage;
+
+-(IBAction) unwindToHome: (UIStoryboardSegue*)unwindSegue;
 @end
