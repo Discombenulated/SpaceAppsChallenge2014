@@ -30,7 +30,7 @@ public class MobileUploadServlet extends UploadPhotoServlet {
 	@Override
 	protected void postUpload(HttpServletRequest req, HttpServletResponse resp, Key<PhotoPost> photoPostKey) throws IOException {
 		JSONObject json = new JSONObject();
-		json.put("photoKey", photoPostKey.getString());
+		json.put("photoId", photoPostKey.getId());
 		JSON.sendJson(resp, 200, json);
 	}
 }

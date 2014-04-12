@@ -15,8 +15,11 @@ import net.sf.jsr107cache.CacheManager;
 import net.skysnapper.entity.PhotoPost;
 import net.skysnapper.util.Constants;
 
-import com.google.appengine.api.blobstore.*;
+import com.google.appengine.api.blobstore.BlobstoreService;
+import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
+import com.google.appengine.api.blobstore.UploadOptions;
 import com.google.appengine.api.memcache.jsr107cache.GCacheFactory;
+import com.google.appengine.api.utils.SystemProperty;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.ObjectifyService;
 
@@ -78,5 +81,9 @@ public class SnapperService {
 				.createUploadUrl(Constants.RelativeURLs.MOBILE_UPLOAD_CALLBACK,
 						UploadOptions.Builder
 						.withGoogleStorageBucketName(Constants.GCS_BUCKET));
+	}
+
+	public boolean isOnAppSpot() {
+		return SystemProperty.environment.value() == SystemProperty.Environment.Value.Production;
 	}
 }

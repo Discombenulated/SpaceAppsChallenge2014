@@ -5,6 +5,8 @@ package net.skysnapper.entity;
 
 import java.util.Date;
 
+import net.skysnapper.services.SnapperService;
+
 import com.google.appengine.api.images.ImagesService;
 import com.google.appengine.api.images.ImagesServiceFactory;
 import com.google.appengine.api.images.ServingUrlOptions;
@@ -54,10 +56,20 @@ public class PhotoPost {
 	
 	public String getURL(){
 		ServingUrlOptions options = ServingUrlOptions.Builder.withGoogleStorageFileName(filename);
-	    return imagesService.getServingUrl(options);
+		SnapperService snapperService = SnapperService.getInstance();
+		
+		if (snapperService.isOnAppSpot()) {
+			return imagesService.getServingUrl(options);
+		} else {
+			return "";
+		}
 	}
 	
 	public Key<PhotoPost> getKey() {
 		return Key.create(this);
+	}
+	
+	public Long getId() {
+		return id;
 	}
 }

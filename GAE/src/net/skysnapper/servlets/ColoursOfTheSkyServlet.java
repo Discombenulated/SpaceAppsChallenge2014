@@ -6,20 +6,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import net.skysnapper.util.JSPs;
 
-public class HomeServlet extends HttpServlet {
-	
-	/**
-	 * generated version.
-	 */
-	private static final long serialVersionUID = 5456686170284216609L;
+public class ColoursOfTheSkyServlet extends HttpServlet {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8597662501248730742L;
+	
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) {
 		try {
-			req.getRequestDispatcher(JSPs.HOME).forward(req, resp);
-			
+			req.getRequestDispatcher(JSPs.COLOURS).forward(req, resp);
 		} catch (Exception e) {
-			
 		}
 	}
 
