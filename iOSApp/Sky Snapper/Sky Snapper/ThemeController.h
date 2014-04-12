@@ -10,5 +10,6 @@
 #import "BaseAnimatedViewController.h"
 
 @interface ThemeController : BaseAnimatedViewController
+@property (nonatomic,strong) IBOutlet UIButton *ButtonClick;
 
 @end
