@@ -1,4 +1,6 @@
 GAE/war/WEB-INF/classes/*
+GAE/war/WEB-INF/appengine-generated
+GAE/war/WEB-INF/appengine-generated/*
 
 # CocoaPods
 #
