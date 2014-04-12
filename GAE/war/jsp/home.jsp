@@ -26,9 +26,10 @@
 		<h2>Snaps from around the world</h2>
 		<div id="map-canvas" class=" homepage-map"></div>
 		
-		<h2>What is SkySnapper</h2>
+		<h3>What is SkySnapper</h3>
 		<p>
-			SkySnapper is a .....
+			<h3><small>Crowd-sourcing Climate Change</small></h3>
+			Take a picture of the sky with our app (coming soon) and our service will analyse the image for signs of air pollution. Use our API to build your own apps or even build a Sky Snapper base station with a Raspberry Pi. With your snaps of the sky, we can gather the data needed to beat climate change!
 		</p>
 		
 		<h2>Get involved</h2>
@@ -39,7 +40,7 @@
 </div>
 
 <div class="col-md-5">
-	<h2></h2>
+	<h2>Recently snapped</h2>
 </div>
 
 <jsp:include page="<%= JSPs.FOOTER %>"></jsp:include>

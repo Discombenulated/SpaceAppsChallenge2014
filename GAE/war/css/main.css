@@ -74,8 +74,18 @@ body {
 	height:250px;
 }
 
+.appstore-link {
+	float:left;
+	margin-right:15px;
+}
+
 .btn-skysnapper {
 	height:40px;
 	display:inline-block;
 	line-height:25px;
+	border-color:#2ecc71;
+	color:#2ecc71;
+	font-weight:bold;
+	border-width:2px;
+	float:left;
 }
