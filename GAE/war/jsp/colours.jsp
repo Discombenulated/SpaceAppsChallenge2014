@@ -24,7 +24,7 @@
 				</p>
 				</div>
 				<div class="col-md-4">
-					Hi
+					<img src="/images/recentsnaps/recentsnap1.jpg" class="img-thumbnail colour-example" />
 				</div>
 			</div>
 		</div>
@@ -40,7 +40,7 @@
 				</p>
 				</div>
 				<div class="col-md-4">
-					Hi
+					<img src="/images/recentsnaps/recentsnap1.jpg" class="img-thumbnail colour-example" />
 				</div>
 			</div>
 		</div>
@@ -56,7 +56,7 @@
 				</p>
 				</div>
 				<div class="col-md-4">
-					Hi
+					<img src="/images/recentsnaps/recentsnap1.jpg" class="img-thumbnail colour-example" />
 				</div>
 			</div>
 		</div>
@@ -72,7 +72,7 @@
 				</p>
 				</div>
 				<div class="col-md-4">
-					Hi
+					<img src="/images/recentsnaps/recentsnap1.jpg" class="img-thumbnail colour-example" />
 				</div>
 			</div>
 		</div>
@@ -88,7 +88,7 @@
 				</p>
 				</div>
 				<div class="col-md-4">
-					Hi
+					<img src="/images/recentsnaps/recentsnap1.jpg" class="img-thumbnail colour-example" />
 				</div>
 			</div>
 		</div>

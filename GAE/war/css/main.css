@@ -30,6 +30,10 @@ h1 a, h1 a:hover, h1 a:link {
 	background-image:url('../images/sky3.jpg');
 }
 
+.header-section.dev-page {
+	background-image:url('/images/sky4.jpg');
+}
+
 .header-section .navbar-default {
 	background:none;
 	border:none;
@@ -190,6 +194,7 @@ footer {
 .recent-snap {
 	border-bottom:1px solid #bdc3c7;
 	padding-bottom:5px;
+	margin-top:10px;
 }
 
 .recent-snap img {
@@ -200,8 +205,19 @@ footer {
 .at {
 	font-size:12px;
 	margin-top:3px;
+	margin-left:2px;
 }
 
 .pre {
 	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+.api-success {
+	color:#2ecc71;
+	font-weight:bold;
+}
+
+.pull-up {
+	margin-top:0;
+	padding-top:0;
 }
