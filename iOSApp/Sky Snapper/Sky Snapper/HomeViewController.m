@@ -78,18 +78,18 @@ NSTimer* backgroundAnimationTimer;
 bool reverseAnimate = NO;
 
 -(void) animateBackground {
-    NSLog(@"Moving");
+    //NSLog(@"Moving");
     long step = 1.0f;
     CGRect imageFrame = self.backgroundImage.frame;
     
     if (reverseAnimate){
         imageFrame.origin = CGPointMake(imageFrame.origin.x + step, imageFrame.origin.y);
-        if (imageFrame.origin.x < 1.0) {
+        if (imageFrame.origin.x >= 0.0) {
             reverseAnimate = NO;
         }
     } else {
         imageFrame.origin = CGPointMake(imageFrame.origin.x - step, imageFrame.origin.y);
-        if (imageFrame.origin.x - step > imageFrame.size.width - self.view.frame.size.width) {
+        if (imageFrame.origin.x - step < 0 - imageFrame.size.width + self.view.frame.size.width) {
             reverseAnimate = YES;
         }
     }
