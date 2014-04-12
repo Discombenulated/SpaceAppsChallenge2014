@@ -17,11 +17,6 @@
         var mapOptions = {
         		zoom: 1,
         	    center: new google.maps.LatLng(0, 0),
-        	    disableDefaultUI: true,
-        	    disableDoubleClickZoom:true,
-        	    panControl:false,
-        	    scrollwheel:false,
-        	    draggable:false,
         };
         window.map = new google.maps.Map(document.getElementById("explore-maps-canvas"),
             mapOptions);
