@@ -5,9 +5,10 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="mobile-web-app-capable" content="yes" />
 		
-		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:700italic,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:700italic,900|Montserrat' rel='stylesheet' type='text/css'>
 		
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="/css/main.css" />
 		<script type="text/javascript" src="/javascript/jquery.min.js"></script>
 		<script type="text/javascript" src="/javascript/snapper.js"></script>
+		<script type="text/javascript" src="/javascript/bootstrap.min.js"></script>

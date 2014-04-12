@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface SkySnapperWS : NSObject
-
+-(NSString*) getUploadUrl;
+-(void) uploadImage:(UIImage*) image;
 @end
