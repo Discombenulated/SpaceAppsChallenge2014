@@ -17,6 +17,11 @@
         var mapOptions = {
         		zoom: 1,
         	    center: new google.maps.LatLng(0, 0),
+        	    disableDefaultUI: true,
+        	    disableDoubleClickZoom:true,
+        	    panControl:false,
+        	    scrollwheel:false,
+        	    draggable:false,
         };
         window.map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
@@ -28,7 +33,6 @@
         	  var neBound = new google.maps.LatLng(75.361729, 171.210938);
         	  var bounds = new google.maps.LatLngBounds(swBound, neBound);
         	  bounds = map.getBounds();
-        	  console.log(bounds);
         	  if (null == overlay) {
         		overlay = new SnapperOverlay(bounds, srcImage, map);
         		}
