@@ -82,4 +82,11 @@ UIImage* chosenImage = nil;
     NSLog(@"Unwound");
 }
 
+- (IBAction)buttonPressed:(id)sender {
+    
+    UIViewController *otherVC = [[UIStoryboard storyboardWithName:@"Learning_iPhone" bundle:nil] instantiateInitialViewController]; //Or get a VC by its identifier
+    
+    [self.navigationController pushViewController:otherVC animated:YES];
+}
+
 @end

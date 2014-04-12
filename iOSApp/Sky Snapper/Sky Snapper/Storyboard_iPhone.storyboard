@@ -58,6 +58,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Learn More" backgroundImage="WhiteSquare"/>
                                 <connections>
+                                    <action selector="buttonPressed:" destination="d1c-hv-saJ" eventType="touchUpInside" id="xmg-IC-GVj"/>
                                     <segue destination="weA-Qv-r1b" kind="push" id="YUY-ed-SjA"/>
                                 </connections>
                             </button>
