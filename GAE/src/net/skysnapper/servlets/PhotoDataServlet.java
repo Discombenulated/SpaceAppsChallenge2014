@@ -41,7 +41,17 @@ public class PhotoDataServlet extends HttpServlet {
 			LOGGER.info(keyString);
 			PhotoPost photo = ofy().load().type(PhotoPost.class).id(StringUtils.parseLong(keyString)).now();
 			obj.put("id", photo.getId());
-			obj.put("title", photo.getTitle());
+			obj.put("takenTimestamp", photo.getTakenTimestamp());
+			obj.put("lat", photo.getLat());
+			obj.put("lon", photo.getLon());
+			obj.put("compassDegrees", photo.getCompassDegrees());
+			obj.put("inclinationDegrees", photo.getInclinationDegrees());
+			obj.put("averageR", photo.getAverageR());
+			obj.put("averageG", photo.getAverageG());
+			obj.put("averageB", photo.getAverageB());
+			obj.put("palletR", photo.getPalletR());
+			obj.put("palletG", photo.getPalletG());
+			obj.put("palletB", photo.getPalletB());
 		}
 		
 		JSON.sendJson(response, 200, obj);
