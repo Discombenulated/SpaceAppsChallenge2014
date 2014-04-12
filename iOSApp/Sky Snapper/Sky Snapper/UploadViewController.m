@@ -68,7 +68,7 @@ NSTimer* forwardTimer = nil;
     }
 }
 
-long step = 0.1f;
+double step = 0.1f;
 
 -(void) forwardToResult{
     if (self.progressView.progress >= 1.0f){
@@ -82,8 +82,9 @@ long step = 0.1f;
 }
 
 -(void) setLoaderProgress{
-    NSLog(@"Setting progress: %f", self.progressView.progress + step);
-    [self.progressView setProgress:self.progressView.progress + step animated:YES];
+    double newProgress = self.progressView.progress + step;
+    NSLog(@"Setting progress: %f + %f = %f", self.progressView.progress, step, newProgress);
+    [self.progressView setProgress:newProgress animated:YES];
 }
 
 @end
