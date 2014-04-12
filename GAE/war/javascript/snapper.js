@@ -4,6 +4,7 @@ $(document).ready(function() {
 	        e.stopPropagation();
 	    }
 	});
-	console.log($("#explore-maps-canvas").offset());
-	$("#explore-maps-canvas").height($(document).height() - $("#explore-maps-canvas").offset().top - 5);
+	if ($("#explore-maps-canvas").length > 0) {
+		$("#explore-maps-canvas").height($(document).height() - $("#explore-maps-canvas").offset().top - 5);
+	}
 });
