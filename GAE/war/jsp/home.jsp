@@ -79,6 +79,7 @@
 <div class="col-md-7 edge">
 		<h2>Sky colour worldwide snapshot</h2>
 		<div id="map-canvas" class=" homepage-map"></div>
+		<h4 class="explore-snag">Looks interesting? Why not go and <a href="/jsp/explore.jsp" class="btn btn-explore">explore</a>?</h4>
 		
 		<h3>What is SkySnapper? <small>Crowd-sourcing Climate Change</small></h3>
 		<p>
