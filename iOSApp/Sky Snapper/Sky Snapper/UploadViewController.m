@@ -42,13 +42,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-NSTimer* forwardTimer = nil;
+NSTimer* uploadTimer = nil;
+double maxProgress = 0.75f;
 
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     self.progressView.progress = 0.0f;
-    //forwardTimer = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(forwardToResult) userInfo:nil repeats:YES];
+    uploadTimer = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(updateProgress) userInfo:nil repeats:YES];
     
     dispatch_queue_t fetchQueue = dispatch_queue_create("photo url", NULL);
     dispatch_async(fetchQueue, ^{
@@ -56,10 +57,13 @@ NSTimer* forwardTimer = nil;
         //NSString* photoUploadUrl = [ws getUploadUrl];
         NSString* photoId = [ws uploadImage:self.uploadImage];
         NSLog(@"Photo id: %@", photoId);
+        maxProgress = 0.90f;
         PhotoDetails* photoDetails = [ws getPhotoInformationForPhotoWithId:photoId];
         NSLog(@"Got photo details for photo with id: %@", photoDetails.photoId);
 
         dispatch_async(dispatch_get_main_queue(), ^{
+            [uploadTimer invalidate];
+            uploadTimer = nil;
             self.progressView.progress = 1.0f;
             [self forwardToResult];
         });
@@ -67,8 +71,8 @@ NSTimer* forwardTimer = nil;
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
-    //[forwardTimer invalidate];
-    //forwardTimer = nil;
+    [uploadTimer invalidate];
+    uploadTimer = nil;
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
@@ -86,23 +90,22 @@ NSTimer* forwardTimer = nil;
     }
 }
 
-double step = 0.1f;
+double step = 0.05f;
 
--(void) forwardToResult{
-    if (self.progressView.progress >= 1.0f){
-        [forwardTimer invalidate];
-        forwardTimer = nil;
-        [self performSegueWithIdentifier:@"ResultSegue" sender:nil];
-    }
-    else {
-        [self performSelectorOnMainThread:@selector(setLoaderProgress) withObject:nil waitUntilDone:NO];
-    }
+-(void) updateProgress {
+//    dispatch_async(dispatch_get_main_queue(), ^{
+        double newProgress = self.progressView.progress + step;
+        if (newProgress < maxProgress) {
+            NSLog(@"Setting progress: %f + %f = %f", self.progressView.progress, step, newProgress);
+            [self.progressView setProgress:newProgress animated:YES];
+        }
+//    });
 }
 
--(void) setLoaderProgress{
-    double newProgress = self.progressView.progress + step;
-    NSLog(@"Setting progress: %f + %f = %f", self.progressView.progress, step, newProgress);
-    [self.progressView setProgress:newProgress animated:YES];
+-(void) forwardToResult{
+        [uploadTimer invalidate];
+        uploadTimer = nil;
+        [self performSegueWithIdentifier:@"ResultSegue" sender:nil];
 }
 
 @end
