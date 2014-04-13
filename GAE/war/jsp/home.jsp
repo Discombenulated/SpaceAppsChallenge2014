@@ -101,13 +101,13 @@
 	<h2>Recently snapped</h2>
 	<div class="recently-snapped">
 		<div class="recent-snap" data-latitude="49.435985" data-longitude="12.128906">
-			<img class="img-thumbnail" src="/images/recentsnaps/recentsnap1.jpg "/>
+			<img class="img-thumbnail recent-snap-img" src="/images/recentsnaps/recentsnap1.jpg "/>
 			<div class="at">at <span class="pre">49.435985, 12.128906</span>. Classification: <a href="#">Dark Blue</a>
 			</div>
 		</div>
 		
 		<div class="recent-snap" data-latitude="36.945502" data-longitude="-93.691406">
-			<img class="img-thumbnail" src="/images/recentsnaps/recentsnap1.jpg "/>
+			<img class="img-thumbnail recent-snap-img" src="/images/recentsnaps/recentsnap2.jpg "/>
 			<div class="at">at <span class="pre">36.945502, -93.691406</span>. Classification: <a href="#">Dark Blue</a>
 			</div>
 		</div>
