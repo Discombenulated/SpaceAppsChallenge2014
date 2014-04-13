@@ -75,12 +75,12 @@ h1 a, h1 a:hover, h1 a:link {
 
 .header-section .navbar-nav li.call-to-action {
 	background:#2ecc71;
-	border-color:white;
+	border-color:#073b1d;
 }
 
 .header-section .navbar-nav li.action-button {
 	background:#e74c3c;
-	border-color:white;
+	border-color:#3d0601;
 }
 
 .header-section .navbar-nav li.active>a:link, .header-section .navbar-nav li.active>a, .header-section .navbar-nav li.active>a:hover {

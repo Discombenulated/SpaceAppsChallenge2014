@@ -20,7 +20,8 @@
 			<div class="media-body">
 				<div class="col-md-8">
 				<h4 class="media-heading">Deep Blue</h4>
-				<p>A very clean sky. A deep blue sky can occur when a cold front brings in clean, unpolluted air from the north. A deep blue sky can also occur when clean air from over the ocean is pushed over the land.
+				<p>
+					A very clean sky. A deep blue sky can occur when a cold front brings in clean, unpolluted air from the north. A deep blue sky can also occur when clean air from over the ocean is pushed over the land.
 				</p>
 				</div>
 				<div class="col-md-4">
@@ -36,7 +37,8 @@
 			<div class="media-body">
 				<div class="col-md-8">
 				<h4 class="media-heading">Clear Blue</h4>
-				<p>A very clean sky. A deep blue sky can occur when a cold front brings in clean, unpolluted air from the north. A deep blue sky can also occur when clean air from over the ocean is pushed over the land.
+				<p>
+					Suggests plenty of water vapor in the sky. It can also suggest the presence of sulfur from coal burning power plants. In some regions a medium blue or even pale blue sky can be caused by emissions from plants and trees. The Smoky Mountains of North Carolina and Tennessee are famous for their bluish haze caused by tiny particles in the air formed by terpenes, a chemical emitted by some trees and plants.
 				</p>
 				</div>
 				<div class="col-md-4">
@@ -84,7 +86,8 @@
 			<div class="media-body">
 				<div class="col-md-8">
 				<h4 class="media-heading">Milky</h4>
-				<p>A very clean sky. A deep blue sky can occur when a cold front brings in clean, unpolluted air from the north. A deep blue sky can also occur when clean air from over the ocean is pushed over the land.
+				<p>
+					Suggests the possibility of considerable air pollution in the form of sulfur from coal-burning power plants or certain chemical plants. In some areas this condition occurs mainly in summer when the air is still and pollution accumulates. There are also natural sources of sulfur dioxide, including volcanoes and ocean plankton. Large portions of the island of Hawaii have often been blanketed by a thick layer of hazy sulfur dioxide from the Kilauea Volcano.
 				</p>
 				</div>
 				<div class="col-md-4">
