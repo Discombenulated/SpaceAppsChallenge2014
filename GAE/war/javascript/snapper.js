@@ -12,6 +12,12 @@ $(document).ready(function() {
 	
 });
 
+$(function() {
+    $('.jcarousel').jcarousel({
+    	list: '.jcarousel-list'
+    });
+});
+
 function setupImages() {
 	window.coloursbase = "/images/colours/";
 	window.orangeImage = {

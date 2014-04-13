@@ -76,6 +76,8 @@
       
 </script>
 
+<script type="text/javascript" src="/javascript/jquery.jcarousel.min.js"></script>
+
 <jsp:include page="<%= JSPs.END %>"></jsp:include>
 <jsp:include page="<%= JSPs.CONTENT_START %>"></jsp:include>
 
@@ -104,14 +106,16 @@
 
 <div class="col-md-5">
 	<h2>Recently snapped</h2>
-	<div class="recently-snapped">
+	<div class="jcarousel recently-snapped">
+		<ul class="jcarousel-list">
 		<% for (PhotoPost photo : (Iterable<PhotoPost>) request.getAttribute(Constants.Attributes.PHOTOS_LIST)) { %>
-		<div class="recent-snap" data-latitude="<%= escape(photo.getLat()) %>" data-longitude="<%= escape(photo.getLon()) %>">
+		<li class="recent-snap" data-latitude="<%= escape(photo.getLat()) %>" data-longitude="<%= escape(photo.getLon()) %>">
 			<img class="img-thumbnail recent-snap-img" src="<%= escape(photo.getURL()) %>?s=200"/>
 			<div class="at">at <span class="pre"><%= escape(photo.getLat()) %>, <%= escape(photo.getLon()) %></span>. Classification: <a href="#">Dark Blue (<%= escape(photo.getAverageR()) %>, <%= escape(photo.getAverageG()) %>, <%= escape(photo.getAverageB()) %>)</a>
 			</div>
-		</div>
+		</li>
 		<% } %>
+		</ul>
 	</div>
 	
 	<br /><br />
