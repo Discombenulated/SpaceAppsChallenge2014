@@ -3,8 +3,6 @@
  */
 package net.skysnapper.servlets;
 
-import static com.googlecode.objectify.ObjectifyService.ofy;
-
 import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServlet;
@@ -12,9 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import net.skysnapper.entity.PhotoPost;
+import net.skysnapper.services.SnapperService;
 import net.skysnapper.util.Constants;
 import net.skysnapper.util.JSON;
-import net.skysnapper.util.StringUtils;
 
 import org.json.simple.JSONObject;
 
@@ -39,19 +37,23 @@ public class PhotoDataServlet extends HttpServlet {
 		
 		if (null != keyString) {
 			LOGGER.info(keyString);
-			PhotoPost photo = ofy().load().type(PhotoPost.class).id(StringUtils.parseLong(keyString)).now();
-			obj.put("id", photo.getId());
-			obj.put("takenTimestamp", photo.getTakenTimestamp());
-			obj.put("lat", photo.getLat());
-			obj.put("lon", photo.getLon());
-			obj.put("compassDegrees", photo.getCompassDegrees());
-			obj.put("inclinationDegrees", photo.getInclinationDegrees());
-			obj.put("averageR", photo.getAverageR());
-			obj.put("averageG", photo.getAverageG());
-			obj.put("averageB", photo.getAverageB());
-			obj.put("palletR", photo.getPalletR());
-			obj.put("palletG", photo.getPalletG());
-			obj.put("palletB", photo.getPalletB());
+			SnapperService snapperService = SnapperService.getInstance();
+			PhotoPost photo = snapperService.getPhoto(keyString);
+			
+			if (null != photo) {
+				obj.put("id", photo.getId());
+				obj.put("takenTimestamp", photo.getTakenTimestamp());
+				obj.put("lat", photo.getLat());
+				obj.put("lon", photo.getLon());
+				obj.put("compassDegrees", photo.getCompassDegrees());
+				obj.put("inclinationDegrees", photo.getInclinationDegrees());
+				obj.put("averageR", photo.getAverageR());
+				obj.put("averageG", photo.getAverageG());
+				obj.put("averageB", photo.getAverageB());
+				obj.put("paletteR", photo.getPaletteR());
+				obj.put("paletteG", photo.getPaletteG());
+				obj.put("paletteB", photo.getPaletteB());
+			}
 		}
 		
 		JSON.sendJson(response, 200, obj);

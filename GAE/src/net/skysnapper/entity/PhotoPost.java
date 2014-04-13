@@ -42,9 +42,9 @@ public class PhotoPost {
 	Integer averageR;
 	Integer averageG;
 	Integer averageB;
-	Integer palletR;
-	Integer palletG;
-	Integer palletB;
+	Integer paletteR;
+	Integer paletteG;
+	Integer paletteB;
 	
 	static ImagesService imagesService = ImagesServiceFactory.getImagesService();
 
@@ -145,45 +145,45 @@ public class PhotoPost {
 	}
 
 	/**
-	 * @return the palletR
+	 * @return the paletteR
 	 */
-	public Integer getPalletR() {
-		return palletR;
+	public Integer getPaletteR() {
+		return paletteR;
 	}
 
 	/**
-	 * @param palletR the palletR to set
+	 * @param paletteR the paletteR to set
 	 */
-	public void setPalletR(Integer palletR) {
-		this.palletR = palletR;
+	public void setPaletteR(Integer paletteR) {
+		this.paletteR = paletteR;
 	}
 
 	/**
-	 * @return the palletG
+	 * @return the paletteG
 	 */
-	public Integer getPalletG() {
-		return palletG;
+	public Integer getPaletteG() {
+		return paletteG;
 	}
 
 	/**
-	 * @param palletG the palletG to set
+	 * @param paletteG the paletteG to set
 	 */
-	public void setPalletG(Integer palletG) {
-		this.palletG = palletG;
+	public void setPaletteG(Integer paletteG) {
+		this.paletteG = paletteG;
 	}
 
 	/**
-	 * @return the palletB
+	 * @return the paletteB
 	 */
-	public Integer getPalletB() {
-		return palletB;
+	public Integer getPaletteB() {
+		return paletteB;
 	}
 
 	/**
-	 * @param palletB the palletB to set
+	 * @param paletteB the paletteB to set
 	 */
-	public void setPalletB(Integer palletB) {
-		this.palletB = palletB;
+	public void setPaletteB(Integer paletteB) {
+		this.paletteB = paletteB;
 	}
 
 	/**

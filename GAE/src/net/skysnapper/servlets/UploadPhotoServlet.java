@@ -3,6 +3,8 @@
  */
 package net.skysnapper.servlets;
 
+import static com.google.appengine.api.taskqueue.TaskOptions.Builder.withUrl;
+
 import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
@@ -15,10 +17,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import net.skysnapper.entity.PhotoPost;
 import net.skysnapper.services.SnapperService;
+import net.skysnapper.util.Constants;
 
 import com.google.appengine.api.blobstore.BlobstoreService;
 import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
 import com.google.appengine.api.blobstore.FileInfo;
+import com.google.appengine.api.taskqueue.Queue;
+import com.google.appengine.api.taskqueue.QueueFactory;
 import com.googlecode.objectify.Key;
 
 /**
@@ -69,6 +74,10 @@ public class UploadPhotoServlet extends HttpServlet {
 				}
 			}
 		}
+		
+		Queue queue = QueueFactory.getDefaultQueue();
+	    queue.add(withUrl(Constants.RelativeURLs.PHOTO_UPLOAD_QUEUE).param(
+	            Constants.ParamNames.PHOTO_KEY, photoPostKey.getId() + ""));
 
 		postUpload(req, resp, photoPostKey);
 	}

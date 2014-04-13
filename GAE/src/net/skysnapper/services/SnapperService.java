@@ -95,4 +95,8 @@ public class SnapperService {
 	public boolean isOnAppSpot() {
 		return SystemProperty.environment.value() == SystemProperty.Environment.Value.Production;
 	}
+
+	public PhotoPost getPhoto(String keyString) {
+		return ofy().load().type(PhotoPost.class).id(StringUtils.parseLong(keyString)).now();
+	}
 }

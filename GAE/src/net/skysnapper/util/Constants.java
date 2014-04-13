@@ -14,6 +14,8 @@ public interface Constants {
 		public static final String RESPOND_JS = "/javascript/respond-min.js";
 		
 		public static final String PHOTO_DATA_URL = "/photodata";
+		
+		public static final String PHOTO_UPLOAD_QUEUE = "/queue/photoupload";
 	}
 	
 	public interface ParamNames {
