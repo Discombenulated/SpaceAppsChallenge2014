@@ -103,4 +103,9 @@ public class SnapperService {
 	public void savePhoto(PhotoPost photo) {
 		ofy().save().entity(photo);
 	}
+
+	public Iterable<PhotoPost> getLatestPhotos(int count) {
+		return ofy().load().type(PhotoPost.class).order("-timestamp").limit(count)
+				.iterable();
+	}
 }
