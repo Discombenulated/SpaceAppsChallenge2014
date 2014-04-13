@@ -27,8 +27,9 @@ if (request.getParameter("header-class") != null) {
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="<%= (request.getServletPath().contains("/home")) ? "active" : "" %>"><a href="/">Home</a></li>
+			<li class="<%= (request.getServletPath().contains("/upload")) ? "active" : "" %>"><a href="/jsp/upload_photo.jsp">Upload</a></li>
             <li class="<%= (request.getServletPath().contains("/explore")) ? "active" : "" %>"><a href="/jsp/explore.jsp">Interactive Map</a></li>
-            <li class="<%= (request.getServletPath().contains("/colours")) ? "active" : "" %>"><a href="/colours">The Sky Explained</a>
+            <li class="<%= (request.getServletPath().contains("/colours")) ? "active" : "" %>"><a href="/colours">Sky Zone</a>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>            
           </ul>
