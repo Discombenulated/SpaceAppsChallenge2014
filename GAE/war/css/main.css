@@ -75,12 +75,12 @@ h1 a, h1 a:hover, h1 a:link {
 
 .header-section .navbar-nav li.call-to-action {
 	background:#2ecc71;
-	border-color:white;
+	border-color:#073b1d;
 }
 
 .header-section .navbar-nav li.action-button {
 	background:#e74c3c;
-	border-color:white;
+	border-color:#3d0601;
 }
 
 .header-section .navbar-nav li.active>a:link, .header-section .navbar-nav li.active>a, .header-section .navbar-nav li.active>a:hover {
@@ -249,4 +249,10 @@ h4.explore-snag {
 h4.explore-snag .btn {
 	border:1px solid #e74c3c;
 	color:#e74c3c;
+}
+
+.filter {
+	background:#ecf0f1;
+	border-bottom:3px solid #7f8c8d;
+	padding:3px 6px;
 }

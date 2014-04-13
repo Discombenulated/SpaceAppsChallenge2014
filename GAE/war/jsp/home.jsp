@@ -88,7 +88,7 @@
 			<dl class="what-to-do">
 				<dt><a href="#">Tweeting your sky snaps</a> to us.</dt>
 				<dt>Using <a href="#">our app</a> to snap a picture of the sky.</dt>
-				<dt>Building your own Sky Snapper stations with our <a href="#">developer tools</a>.</dt>
+				<dt>Building your own Sky Snapper stations with our <a href="/jsp/developers.jsp">developer tools</a>.</dt>
 			</dl>
 		</p>
 		
