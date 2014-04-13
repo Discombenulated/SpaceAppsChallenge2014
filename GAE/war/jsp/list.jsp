@@ -22,24 +22,33 @@
 %>
 <div class="row">
 	<div class="col-md-12">
-		<h2>Send us your snaps!</h2>
-		<p>Simply browse for your photo and click "Upload". Your Sky Snap will be displayed alongside other submissions.</p>
-		<form action="<%=uploadUrl%>" method="post" enctype="multipart/form-data" class="form-group row">
-			<div class="col-md-8">
-				<input type="file" name="fileName" required class="form-control" />
-			</div>
-			<div class="col-md-4"> 
-				<input class="btn btn-primary" type="submit" value="Upload">
-			</div>
-		</form>
-		<p>Tips for Sky Snappers</p>
-		<ul>
-			<li>Try to choose an area of clear sky and <b>centre this</b> in your image.</li>
-			<li>If the sky is totally clear, why not get a bit of the horizon in your photo as well?</li>
-			<li>Try to take the photograph facing away from the sun.</li>
-		</ul>
-		
+	<h2>All photos (most recent first)</h2>
+
+	<div class="photoList">
+			<%
+				SimpleDateFormat sdf = new SimpleDateFormat(
+						"EEE, d MMM yyyy HH:mm:ss Z");
+				Iterable<PhotoPost> photos = snapperService.getAllImages();
+				int x = 0;
+				for (PhotoPost post : photos) {
+					%>
+					if (x == 0 || (x-1)%4 == 0) {
+					<div class="row">
+					}
+					
+						<div class="col-md-3">
+							<h3><%= sdf.format(post.getUploadTimestamp()) %></h3>
+							<h4><%= post.getId() %></h4>
+							<h5><%= post.getAverageR() %>,<%= post.getAverageG() %>,<%= post.getAverageB() %></h5>
+							<img class="thumbnail" src="<%= post.getURL() %>=s100" />
+						</div>
+					if (x%4 == 0) {
+					</div> <!-- end row -->
+					}
+				<% } %>
 	</div>
+
+</div>
 </div>
 </body>
 </html>
