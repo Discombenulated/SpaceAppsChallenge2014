@@ -4,15 +4,84 @@ xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+	<listener>
+        <listener-class>net.skysnapper.servlets.SkySnapperContextListener</listener-class>
+    </listener>
+    
+    <filter>
+		<filter-name>ObjectifyFilter</filter-name>
+		<filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ObjectifyFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
 	<servlet>
-		<servlet-name>Sky_snapper</servlet-name>
-		<servlet-class>net.skysnapper.Sky_snapperServlet</servlet-class>
+		<servlet-name>photodata</servlet-name>
+		<servlet-class>net.skysnapper.servlets.PhotoDataServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Sky_snapper</servlet-name>
-		<url-pattern>/sky_snapper</url-pattern>
+		<servlet-name>photodata</servlet-name>
+		<url-pattern>/photodata</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>mobileUpload</servlet-name>
+		<servlet-class>net.skysnapper.servlets.MobileUploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>mobileUpload</servlet-name>
+		<url-pattern>/mobileuploadcallback</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>restApi</servlet-name>
+		<servlet-class>net.skysnapper.servlets.RestApi</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>restApi</servlet-name>
+		<url-pattern>/restapi</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>photoUpload</servlet-name>
+		<servlet-class>net.skysnapper.servlets.UploadPhotoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>photoUpload</servlet-name>
+		<url-pattern>/photouploadcallback</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HomeServlet</servlet-name>
+		<servlet-class>net.skysnapper.servlets.HomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HomeServlet</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ColoursServlet</servlet-name>
+		<servlet-class>net.skysnapper.servlets.ColoursOfTheSkyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ColoursServlet</servlet-name>
+		<url-pattern>/colours</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>photoUploadQueue</servlet-name>
+		<servlet-class>net.skysnapper.servlets.queue.PhotoUploadQueueServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>photoUploadQueue</servlet-name>
+		<url-pattern>/queue/photoupload</url-pattern>
+	</servlet-mapping>
+
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>home</welcome-file>
 	</welcome-file-list>
 </web-app>

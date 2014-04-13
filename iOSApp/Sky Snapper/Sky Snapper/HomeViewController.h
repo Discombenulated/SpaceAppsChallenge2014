@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseAnimatedViewController.h"
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : BaseAnimatedViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic, strong) IBOutlet UIButton* snapButton;
+
+-(IBAction) unwindToHome: (UIStoryboardSegue*)unwindSegue;
 @end

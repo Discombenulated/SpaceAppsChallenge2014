@@ -1,4 +1,6 @@
 GAE/war/WEB-INF/classes/*
+GAE/war/WEB-INF/appengine-generated
+GAE/war/WEB-INF/appengine-generated/*
 
 # CocoaPods
 #
@@ -7,9 +9,8 @@ GAE/war/WEB-INF/classes/*
 # http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control?
 #
 # Pods/
-
-
-
+GAE/.settings/com.google.appengine.eclipse.core.prefs
+.metadata
 
 #########################
 # .gitignore file for Xcode4 and Xcode5 Source projects

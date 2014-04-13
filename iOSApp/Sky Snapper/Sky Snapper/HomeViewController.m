@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 
-#import <QuartzCore/QuartzCore.h>
+#import "UploadViewController.h"
 
 @interface HomeViewController ()
 
@@ -30,11 +30,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    //snapButton.layer.borderColor = [UIColor whiteColor].CGColor;
-    //snapButton.layer.backgroundColor = [UIColor whiteColor].CGColor;
-    //snapButton.layer.borderWidth = 1.0;
-    //snapButton.layer.cornerRadius = 10;
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
+-(void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,15 +48,45 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     if ([segue.identifier isEqualToString:@"SnapPictureSegue"]) {
+         UIImagePickerController *pickerController = segue.destinationViewController;
+         pickerController.delegate = self;
+         pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+         pickerController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+         pickerController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+     } else if ([segue.identifier isEqualToString:@"UploadSegue"]) {
+         NSLog(@"Uploading");
+         UploadViewController* uploadController = segue.destinationViewController;
+         uploadController.uploadImage = chosenImage;
+     }
+ }
+
+UIImage* chosenImage = nil;
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    NSLog(@"Photo chosen");
+    chosenImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [self performSegueWithIdentifier:@"UploadSegue" sender:nil];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
-*/
+
+-(IBAction) unwindToHome:(UIStoryboardSegue*)unwindSegue {
+    NSLog(@"Unwound");
+}
+
+- (IBAction)buttonPressed:(id)sender {
+    
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Learning_iPhone" bundle:nil];
+    UIViewController* initialHelpView = [storyboard instantiateInitialViewController];
+    [self.navigationController pushViewController:initialHelpView animated:YES];
+}
 
 @end
