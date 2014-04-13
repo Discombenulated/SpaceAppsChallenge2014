@@ -15,10 +15,9 @@
 <jsp:include page="<%= JSPs.CONTENT_START %>"></jsp:include>
 
 <%
-	SnapperService snapperService = SnapperService
-			.getInstance();
+	SnapperService snapperService = SnapperService.getInstance();
 
-	String uploadUrl = snapperService.getMobileUploadURL();
+	String uploadUrl = snapperService.getPhotoUploadURL();
 %>
 <div class="row">
 	<div class="col-md-12">
