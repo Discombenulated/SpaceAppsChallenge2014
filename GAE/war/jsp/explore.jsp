@@ -3,7 +3,7 @@
 <%@page import="net.skysnapper.util.JSPs"%>
 
 <jsp:include page="<%= JSPs.START %>"></jsp:include>
-<%= Page.title("Colours of the sky") %>
+<%= Page.title("Explore the sky") %>
 <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV62aeCEjJHb6dqhaswm7dLEB3-r2Gsr0&sensor=false">
     </script>
@@ -37,7 +37,7 @@
 </jsp:include>
 
 <div class="col-md-12">
-	<h2 class="sky-beautiful">Interactive Map <small>The sky is beautiful. Explore it.</small> (coming soon)</h2>
+	<h2 class="sky-beautiful">Interactive Map <small>The sky is beautiful. Explore it.</small></h2>
 </div>
 
 <div class="col-md-7">
@@ -86,6 +86,10 @@
 		<input type="text" class="form-control" placeholder="When" />
 	</div>
 	
+	<div class="filter-item button">
+		<button class="btn btn-primary">Filter</button>
+	</div>
+	
 	<div class="clearfix"></div>
 	</div>
 	
@@ -97,7 +101,7 @@
 			</div>
 			<div class="row">
 			<div class="about">
-				Classification: <span class="classification dark-blue">dark blue</span>
+				<span class="classification dark-blue">dark blue</span>
 			</div>
 			</div>
 		</div>
@@ -108,7 +112,7 @@
 			</div>
 			<div class="row">
 			<div class="about">
-				Classification: <span class="classification orange">orange</span>
+				<span class="classification orange">orange</span>
 			</div>
 			</div>
 		</div>
@@ -118,7 +122,77 @@
 			</div>
 			<div class="row">
 			<div class="about">
-				Classification: <span class="classification dark-blue">dark blue</span>
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
 			</div>
 			</div>
 		</div>
