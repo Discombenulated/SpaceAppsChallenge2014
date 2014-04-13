@@ -18,7 +18,7 @@
 	SnapperService snapperService = SnapperService
 			.getInstance();
 
-	String uploadUrl = snapperService.getPhotoUploadURL();
+	String uploadUrl = snapperService.getMobileUploadURL();
 %>
 <div class="row">
 	<div class="col-md-12">
