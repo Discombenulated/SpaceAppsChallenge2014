@@ -33,7 +33,7 @@ if (request.getParameter("header-class") != null) {
             <li><a href="#contact">Contact</a></li>            
           </ul>
           <ul class="nav navbar-nav navbar-right">
-          <li class="action-button"><a href="/jsp/app.jsp">The App</a></li>
+          <li class="action-button"><a href="/jsp/app.jsp">Our App</a></li>
           <li class="call-to-action"><a href="/jsp/developers.jsp">For Developers</a></li>
           </ul>
         </div><!--/.nav-collapse -->
