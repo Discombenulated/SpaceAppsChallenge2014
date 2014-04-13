@@ -10,6 +10,9 @@
 		5277EF1E18F9C1C2006BE2F3 /* Learning_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5277EF1D18F9C1C2006BE2F3 /* Learning_iPhone.storyboard */; };
 		5277EF2418F9D51D006BE2F3 /* BaseAnimatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277EF2318F9D51D006BE2F3 /* BaseAnimatedViewController.m */; };
 		5277EF2F18F9EE64006BE2F3 /* ThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277EF2E18F9EE64006BE2F3 /* ThemeController.m */; };
+		5277EF3618F9FFC1006BE2F3 /* PollutionThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277EF3518F9FFC1006BE2F3 /* PollutionThemeController.m */; };
+		5277EF3918FA00A2006BE2F3 /* TechnologyThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277EF3818FA00A2006BE2F3 /* TechnologyThemeController.m */; };
+		5277EF3C18FA00B6006BE2F3 /* ColourThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277EF3B18FA00B6006BE2F3 /* ColourThemeController.m */; };
 		AE23810318F977900080497E /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810218F977900080497E /* UploadViewController.m */; };
 		AE23810718F990870080497E /* SkySnapperWS.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810618F990870080497E /* SkySnapperWS.m */; };
 		AE23810A18F998800080497E /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810918F998800080497E /* ResultViewController.m */; };
@@ -46,6 +49,12 @@
 		5277EF2318F9D51D006BE2F3 /* BaseAnimatedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAnimatedViewController.m; sourceTree = "<group>"; };
 		5277EF2D18F9EE64006BE2F3 /* ThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeController.h; sourceTree = "<group>"; };
 		5277EF2E18F9EE64006BE2F3 /* ThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeController.m; sourceTree = "<group>"; };
+		5277EF3418F9FFC1006BE2F3 /* PollutionThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollutionThemeController.h; sourceTree = "<group>"; };
+		5277EF3518F9FFC1006BE2F3 /* PollutionThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollutionThemeController.m; sourceTree = "<group>"; };
+		5277EF3718FA00A2006BE2F3 /* TechnologyThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TechnologyThemeController.h; sourceTree = "<group>"; };
+		5277EF3818FA00A2006BE2F3 /* TechnologyThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TechnologyThemeController.m; sourceTree = "<group>"; };
+		5277EF3A18FA00B6006BE2F3 /* ColourThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColourThemeController.h; sourceTree = "<group>"; };
+		5277EF3B18FA00B6006BE2F3 /* ColourThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColourThemeController.m; sourceTree = "<group>"; };
 		AE23810118F977900080497E /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
 		AE23810218F977900080497E /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
 		AE23810518F990870080497E /* SkySnapperWS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkySnapperWS.h; sourceTree = "<group>"; };
@@ -102,10 +111,10 @@
 		5277EF1F18F9D49E006BE2F3 /* LearningIsFun */ = {
 			isa = PBXGroup;
 			children = (
+				5277EF1D18F9C1C2006BE2F3 /* Learning_iPhone.storyboard */,
 				5277EF2C18F9D637006BE2F3 /* Pollution */,
 				5277EF2B18F9D62A006BE2F3 /* TechnicalTheme */,
 				5277EF2A18F9D617006BE2F3 /* ColoursView */,
-				5277EF1D18F9C1C2006BE2F3 /* Learning_iPhone.storyboard */,
 				5277EF2818F9D601006BE2F3 /* BaseView */,
 				5277EF2918F9D608006BE2F3 /* ThemeView */,
 			);
@@ -133,6 +142,8 @@
 		5277EF2A18F9D617006BE2F3 /* ColoursView */ = {
 			isa = PBXGroup;
 			children = (
+				5277EF3A18FA00B6006BE2F3 /* ColourThemeController.h */,
+				5277EF3B18FA00B6006BE2F3 /* ColourThemeController.m */,
 			);
 			name = ColoursView;
 			sourceTree = "<group>";
@@ -140,6 +151,8 @@
 		5277EF2B18F9D62A006BE2F3 /* TechnicalTheme */ = {
 			isa = PBXGroup;
 			children = (
+				5277EF3718FA00A2006BE2F3 /* TechnologyThemeController.h */,
+				5277EF3818FA00A2006BE2F3 /* TechnologyThemeController.m */,
 			);
 			name = TechnicalTheme;
 			sourceTree = "<group>";
@@ -147,6 +160,8 @@
 		5277EF2C18F9D637006BE2F3 /* Pollution */ = {
 			isa = PBXGroup;
 			children = (
+				5277EF3418F9FFC1006BE2F3 /* PollutionThemeController.h */,
+				5277EF3518F9FFC1006BE2F3 /* PollutionThemeController.m */,
 			);
 			name = Pollution;
 			sourceTree = "<group>";
@@ -347,10 +362,13 @@
 			files = (
 				AED6540618F8938E003DC239 /* AppDelegate.m in Sources */,
 				AE23810318F977900080497E /* UploadViewController.m in Sources */,
-				AE23810718F990870080497E /* SkyScannerWS.m in Sources */,
+				AE23810718F990870080497E /* SkySnapperWS.m in Sources */,
 				5277EF2F18F9EE64006BE2F3 /* ThemeController.m in Sources */,
+				5277EF3618F9FFC1006BE2F3 /* PollutionThemeController.m in Sources */,
 				AED6540218F8938E003DC239 /* main.m in Sources */,
 				AED6542B18F89DB4003DC239 /* HomeViewController.m in Sources */,
+				5277EF3C18FA00B6006BE2F3 /* ColourThemeController.m in Sources */,
+				5277EF3918FA00A2006BE2F3 /* TechnologyThemeController.m in Sources */,
 				AE23810A18F998800080497E /* ResultViewController.m in Sources */,
 				5277EF2418F9D51D006BE2F3 /* BaseAnimatedViewController.m in Sources */,
 			);
