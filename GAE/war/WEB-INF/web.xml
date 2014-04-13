@@ -62,6 +62,15 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>ColoursServlet</servlet-name>
 		<url-pattern>/colours</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>photoUploadQueue</servlet-name>
+		<servlet-class>net.skysnapper.servlets.queue.PhotoUploadQueueServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>photoUploadQueue</servlet-name>
+		<url-pattern>/queue/photoupload</url-pattern>
+	</servlet-mapping>
 
 	<welcome-file-list>
 		<welcome-file>home</welcome-file>

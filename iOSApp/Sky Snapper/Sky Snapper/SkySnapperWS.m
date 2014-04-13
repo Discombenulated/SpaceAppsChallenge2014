@@ -8,9 +8,11 @@
 
 #import "SkySnapperWS.h"
 
+#import "PhotoDetails.h"
+
 @implementation SkySnapperWS
 
-NSString* serviceUrl = @"http://www.skysnapper.net/restapi";
+NSString* serviceUrl = @"http://www.skysnapper.net/";
 
 -(NSDictionary*) getJsonDataForRequest:(NSURLRequest*) request {
     NSError* error = nil;
@@ -38,7 +40,7 @@ NSString* serviceUrl = @"http://www.skysnapper.net/restapi";
 }
 
 -(NSString*) getUploadUrl {
-    NSString* urlStr = [NSString stringWithFormat:@"%@", serviceUrl];
+    NSString* urlStr = [NSString stringWithFormat:@"%@%@", serviceUrl, @"restapi"];
     NSURL* url = [NSURL URLWithString:urlStr];
     NSURLRequest* request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
     NSDictionary* result = [self getJsonDataForRequest:request];
@@ -52,7 +54,7 @@ NSString* serviceUrl = @"http://www.skysnapper.net/restapi";
     return uploadUrl;
 }
 
--(void) uploadImage:(UIImage*) image {
+-(NSString*) uploadImage:(UIImage*) image {
     NSString* uploadImageUrl = [self getUploadUrl];
     NSLog(@"Upload url: %@", uploadImageUrl);
     
@@ -105,7 +107,28 @@ NSString* serviceUrl = @"http://www.skysnapper.net/restapi";
     [request setHTTPBody:body];
     // now lets make the connection to the web
     NSDictionary* result = [self getJsonDataForRequest:request];
-    NSLog(@"Upload result: %@", result);
+    NSString* photoId = [result objectForKey:@"photoId"];
+    
+    return photoId;
+}
+
+-(PhotoDetails*) getPhotoInformationForPhotoWithId:(NSString*) photoId {
+    NSString* urlStr = [NSString stringWithFormat:@"%@%@?photoid=%@", serviceUrl, @"photodata", photoId];
+    NSURL* url = [NSURL URLWithString:urlStr];
+    NSURLRequest* request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
+    NSDictionary* result = [self getJsonDataForRequest:request];
+    PhotoDetails* photoDetails = [[PhotoDetails alloc] initWithDictionary:result];
+    return photoDetails;
+}
+
++(long) getLongFromString:(id)str {
+    if (str != nil && [str class] != [NSNull class]) {
+        NSString* string2 = str;
+        if ([string2 length] > 0){
+            return [string2 floatValue];
+        }
+    }
+    return NAN;
 }
 
 @end

@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class PhotoDetails;
+
 @interface SkySnapperWS : NSObject
 -(NSString*) getUploadUrl;
--(void) uploadImage:(UIImage*) image;
+-(NSString*) uploadImage:(UIImage*) image;
+-(PhotoDetails*) getPhotoInformationForPhotoWithId:(NSString*) photoId;
+
++(long)getLongFromString:(NSString*)str;
 @end
