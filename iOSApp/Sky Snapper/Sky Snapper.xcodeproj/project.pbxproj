@@ -13,6 +13,7 @@
 		AE23810318F977900080497E /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810218F977900080497E /* UploadViewController.m */; };
 		AE23810718F990870080497E /* SkySnapperWS.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810618F990870080497E /* SkySnapperWS.m */; };
 		AE23810A18F998800080497E /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810918F998800080497E /* ResultViewController.m */; };
+		AE23810F18FA10B70080497E /* PhotoDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = AE23810E18FA10B70080497E /* PhotoDetails.m */; };
 		AED653F618F8938E003DC239 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED653F518F8938E003DC239 /* Foundation.framework */; };
 		AED653F818F8938E003DC239 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED653F718F8938E003DC239 /* CoreGraphics.framework */; };
 		AED653FA18F8938E003DC239 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED653F918F8938E003DC239 /* UIKit.framework */; };
@@ -52,6 +53,8 @@
 		AE23810618F990870080497E /* SkySnapperWS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkySnapperWS.m; sourceTree = "<group>"; };
 		AE23810818F998800080497E /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		AE23810918F998800080497E /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		AE23810D18FA10B70080497E /* PhotoDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetails.h; sourceTree = "<group>"; };
+		AE23810E18FA10B70080497E /* PhotoDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetails.m; sourceTree = "<group>"; };
 		AED653F218F8938E003DC239 /* Sky Snapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sky Snapper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED653F518F8938E003DC239 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AED653F718F8938E003DC239 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -154,10 +157,20 @@
 		AE23810418F990350080497E /* WebService */ = {
 			isa = PBXGroup;
 			children = (
+				AE23810C18FA10990080497E /* Model */,
 				AE23810518F990870080497E /* SkySnapperWS.h */,
 				AE23810618F990870080497E /* SkySnapperWS.m */,
 			);
 			name = WebService;
+			sourceTree = "<group>";
+		};
+		AE23810C18FA10990080497E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE23810D18FA10B70080497E /* PhotoDetails.h */,
+				AE23810E18FA10B70080497E /* PhotoDetails.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		AED653E918F8938E003DC239 = {
@@ -347,10 +360,11 @@
 			files = (
 				AED6540618F8938E003DC239 /* AppDelegate.m in Sources */,
 				AE23810318F977900080497E /* UploadViewController.m in Sources */,
-				AE23810718F990870080497E /* SkyScannerWS.m in Sources */,
+				AE23810718F990870080497E /* SkySnapperWS.m in Sources */,
 				5277EF2F18F9EE64006BE2F3 /* ThemeController.m in Sources */,
 				AED6540218F8938E003DC239 /* main.m in Sources */,
 				AED6542B18F89DB4003DC239 /* HomeViewController.m in Sources */,
+				AE23810F18FA10B70080497E /* PhotoDetails.m in Sources */,
 				AE23810A18F998800080497E /* ResultViewController.m in Sources */,
 				5277EF2418F9D51D006BE2F3 /* BaseAnimatedViewController.m in Sources */,
 			);

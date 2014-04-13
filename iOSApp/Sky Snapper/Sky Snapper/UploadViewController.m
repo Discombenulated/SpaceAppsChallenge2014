@@ -11,6 +11,7 @@
 #import "ResultViewController.h"
 
 #import "SkySnapperWS.h"
+#import "PhotoDetails.h"
 
 @interface UploadViewController ()
 
@@ -53,8 +54,10 @@ NSTimer* forwardTimer = nil;
     dispatch_async(fetchQueue, ^{
         SkySnapperWS* ws = [SkySnapperWS new];
         //NSString* photoUploadUrl = [ws getUploadUrl];
-        [ws uploadImage:self.uploadImage];
-        //NSLog(@"Photo upload url: %@", photoUploadUrl);
+        NSString* photoId = [ws uploadImage:self.uploadImage];
+        NSLog(@"Photo id: %@", photoId);
+        PhotoDetails* photoDetails = [ws getPhotoInformationForPhotoWithId:photoId];
+        NSLog(@"Got photo details for photo with id: %@", photoDetails.photoId);
 
         dispatch_async(dispatch_get_main_queue(), ^{
             self.progressView.progress = 1.0f;
