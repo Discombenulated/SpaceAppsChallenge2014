@@ -14,7 +14,9 @@ import net.skysnapper.services.SnapperService;
 import net.skysnapper.util.Constants;
 
 import com.google.appengine.api.images.Image;
+import com.google.appengine.api.images.ImagesService;
 import com.google.appengine.api.images.ImagesServiceFactory;
+import com.google.appengine.api.images.Transform;
 
 /**
  * @author LONJS43
@@ -39,11 +41,15 @@ public class PhotoUploadQueueServlet extends HttpServlet {
 			PhotoPost photo = snapperService.getPhoto(keyString);
 			
 			if (null != photo) {
-				Image image = ImagesServiceFactory.makeImageFromFilename(photo.getFilename());
-				byte[] imageData = image.getImageData();
+				Image originalImage = ImagesServiceFactory.makeImageFromFilename(photo.getFilename());
+				ImagesService imagesService = ImagesServiceFactory.getImagesService();
+				Transform resize = ImagesServiceFactory.makeCrop(0.33, 0.33, 0.66, 0.66);
+				
+				Image croppedImage = imagesService.applyTransform(resize, originalImage); 
+				byte[] imageData = croppedImage.getImageData();
 
-				int h = image.getHeight();
-				int w = image.getWidth();
+				int h = croppedImage.getHeight();
+				int w = croppedImage.getWidth();
 				
 				LOGGER.info("h:" + h + " w:" + w + " " + (h*w*3) + "=" + imageData.length);
 				
