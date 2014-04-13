@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5266024F18FA93700017B936 /* PollutionViewOneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5266024E18FA93700017B936 /* PollutionViewOneController.m */; };
 		5277EF1E18F9C1C2006BE2F3 /* Learning_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5277EF1D18F9C1C2006BE2F3 /* Learning_iPhone.storyboard */; };
 		5277EF2418F9D51D006BE2F3 /* BaseAnimatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277EF2318F9D51D006BE2F3 /* BaseAnimatedViewController.m */; };
 		5277EF2F18F9EE64006BE2F3 /* ThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5277EF2E18F9EE64006BE2F3 /* ThemeController.m */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5266024D18FA93700017B936 /* PollutionViewOneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollutionViewOneController.h; sourceTree = "<group>"; };
+		5266024E18FA93700017B936 /* PollutionViewOneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollutionViewOneController.m; sourceTree = "<group>"; };
 		5277EF1D18F9C1C2006BE2F3 /* Learning_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Learning_iPhone.storyboard; sourceTree = "<group>"; };
 		5277EF2218F9D51D006BE2F3 /* BaseAnimatedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAnimatedViewController.h; sourceTree = "<group>"; };
 		5277EF2318F9D51D006BE2F3 /* BaseAnimatedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAnimatedViewController.m; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 			children = (
 				5277EF3418F9FFC1006BE2F3 /* PollutionThemeController.h */,
 				5277EF3518F9FFC1006BE2F3 /* PollutionThemeController.m */,
+				5266024D18FA93700017B936 /* PollutionViewOneController.h */,
+				5266024E18FA93700017B936 /* PollutionViewOneController.m */,
 			);
 			name = Pollution;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AED6540618F8938E003DC239 /* AppDelegate.m in Sources */,
+				5266024F18FA93700017B936 /* PollutionViewOneController.m in Sources */,
 				AE23810318F977900080497E /* UploadViewController.m in Sources */,
 				AE23810718F990870080497E /* SkySnapperWS.m in Sources */,
 				5277EF2F18F9EE64006BE2F3 /* ThemeController.m in Sources */,
