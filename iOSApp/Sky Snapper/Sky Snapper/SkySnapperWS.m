@@ -40,10 +40,15 @@ NSString* serviceUrl = @"http://www.skysnapper.net/restapi";
 -(NSString*) getUploadUrl {
     NSString* urlStr = [NSString stringWithFormat:@"%@", serviceUrl];
     NSURL* url = [NSURL URLWithString:urlStr];
-    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    NSURLRequest* request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
     NSDictionary* result = [self getJsonDataForRequest:request];
     NSDictionary* photoUpload = [result objectForKey:@"photoUpload"];
     NSString* uploadUrl = [photoUpload objectForKey:@"uploadURL"];
+    if (uploadUrl == nil || [uploadUrl length] <= 0) {
+        for (NSString* key in photoUpload.allKeys){
+            NSLog(@"Key: %@", key);
+        }
+    }
     return uploadUrl;
 }
 
@@ -52,6 +57,8 @@ NSString* serviceUrl = @"http://www.skysnapper.net/restapi";
     NSLog(@"Upload url: %@", uploadImageUrl);
     
     NSURL* url = [NSURL URLWithString:uploadImageUrl];
+    
+    [NSThread sleepForTimeInterval:1.0f];
     
     // Resize image
     UIImage *tempImage = nil;
@@ -74,7 +81,7 @@ NSString* serviceUrl = @"http://www.skysnapper.net/restapi";
     NSError* error = nil;
     NSData* requestParamsData = [NSJSONSerialization dataWithJSONObject:requestParams options:0 error:&error];
     
-    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
     [request setHTTPMethod:@"POST"];
     
     NSString *boundary = @"-----------------BOUNDARY123456765432348765";
