@@ -39,6 +39,7 @@
 					<div class="col-md-12">
 						<h3><%= sdf.format(post.getUploadTimestamp()) %></h3>
 						<h4><%= post.getId() %></h4>
+						<h5><%= post.getAverageR() %>,<%= post.getAverageG() %>,<%= post.getAverageB() %></h5>
 						<img class="thumbnail" src="<%= post.getURL() %>=s100" />
 					</div>
 				</div>

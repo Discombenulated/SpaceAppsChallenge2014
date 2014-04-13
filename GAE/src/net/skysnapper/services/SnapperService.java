@@ -99,4 +99,8 @@ public class SnapperService {
 	public PhotoPost getPhoto(String keyString) {
 		return ofy().load().type(PhotoPost.class).id(StringUtils.parseLong(keyString)).now();
 	}
+
+	public void savePhoto(PhotoPost photo) {
+		ofy().save().entity(photo);
+	}
 }
