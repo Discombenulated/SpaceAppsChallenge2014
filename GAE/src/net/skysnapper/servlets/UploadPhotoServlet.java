@@ -43,7 +43,11 @@ public class UploadPhotoServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 
-		String title = req.getParameter("title");
+		String takenTimestamp = req.getParameter("takenTimestamp");
+		String lat = req.getParameter("lat");
+		String lon = req.getParameter("lon");
+		String compassDegrees = req.getParameter("compassDegrees");
+		String inclinationDegrees = req.getParameter("inclinationDegrees");
 
 		BlobstoreService blobstoreService = BlobstoreServiceFactory
 				.getBlobstoreService();
@@ -61,7 +65,7 @@ public class UploadPhotoServlet extends HttpServlet {
 				String gsFileName = myfileinfo.getGsObjectName();
 				LOGGER.info(gsFileName);
 				if (myfileinfo.getSize() > 0) {
-					photoPostKey = snapperService.createNewPost(title, gsFileName);
+					photoPostKey = snapperService.createNewPost(gsFileName, takenTimestamp, lat, lon, compassDegrees, inclinationDegrees);
 				}
 			}
 		}
