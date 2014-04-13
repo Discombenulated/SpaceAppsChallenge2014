@@ -42,6 +42,10 @@ h1 a, h1 a:hover, h1 a:link {
 	background-image:url('/images/sky6.jpg');
 }
 
+.header-section.about-page {
+	background-image:url('/images/sky7.jpg');
+}
+
 .header-section .navbar-default {
 	background:none;
 	border:none;
