@@ -56,7 +56,7 @@ public class SnapperService {
 	}
 	
 	public Iterable<PhotoPost> getAllImages() {
-		return ofy().load().type(PhotoPost.class).order("timestamp")
+		return ofy().load().type(PhotoPost.class).order("-timestamp")
 				.iterable();
 	}
 

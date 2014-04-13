@@ -39,7 +39,6 @@ public class RestApi extends HttpServlet {
 		// photo upload api
 		JSONObject photoUpload = new JSONObject();
 		photoUpload.put("uploadURL", snapperService.getMobileUploadURL());
-		photoUpload.put("testUploadURL", snapperService.getPhotoUploadURL());
 		
 		JSONObject params = new JSONObject();
 		params.put("takenTimestamp", "UNIX timestamp milliseconds since 1970");
