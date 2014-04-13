@@ -29,12 +29,12 @@
 				SimpleDateFormat sdf = new SimpleDateFormat(
 						"EEE, d MMM yyyy HH:mm:ss Z");
 				Iterable<PhotoPost> photos = snapperService.getAllImages();
-				int x = 0;
+				int x = 1;
 				for (PhotoPost post : photos) {
-					%>
-					if (x == 0 || (x-1)%4 == 0) {
+					
+					if (x == 1 || (x-1)%4 == 0) { %>
 					<div class="row">
-					}
+					<%} %>
 					
 						<div class="col-md-3">
 							<h3><%= sdf.format(post.getUploadTimestamp()) %></h3>
@@ -42,10 +42,15 @@
 							<h5><%= post.getAverageR() %>,<%= post.getAverageG() %>,<%= post.getAverageB() %></h5>
 							<img class="thumbnail" src="<%= post.getURL() %>=s100" />
 						</div>
-					if (x%4 == 0) {
+					<%if (x%4 == 0) {%>
 					</div> <!-- end row -->
-					}
+					<%} 
+					x++;%>
 				<% } %>
+				<%if ((x-1)%4 != 0) {%>
+				</div> <!-- end row -->
+				<%} %>
+				<p>Total photos: <%=x %></p>
 	</div>
 
 </div>

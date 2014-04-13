@@ -7,8 +7,6 @@
         <!--Theme Controller-->
         <scene sceneID="cSz-gk-Y8m">
             <objects>
-                <exit id="qhp-HW-4R0" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kkF-1J-it4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Iry-TQ-Ws0" customClass="ThemeController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YNS-QH-3Ms"/>
@@ -83,6 +81,8 @@
                         <outlet property="backgroundImage" destination="aHB-rp-P7A" id="U4x-4T-VyY"/>
                     </connections>
                 </viewController>
+                <exit id="qhp-HW-4R0" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkF-1J-it4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1573" y="-3139"/>
         </scene>
@@ -340,25 +340,25 @@
 Major cause of asthma attacks.
 
 On days air pollution levels are high there are:</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More heart attacks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIi-PU-8IQ">
-                                <rect key="frame" x="78" y="329" width="144" height="21"/>
+                                <rect key="frame" x="78" y="335" width="165" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More strokes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1f-9U-4BE">
-                                <rect key="frame" x="100" y="368" width="101" height="21"/>
+                                <rect key="frame" x="103" y="383" width="114" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More hospitalisations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILn-EO-WNp">
-                                <rect key="frame" x="68" y="412" width="164" height="21"/>
+                                <rect key="frame" x="61" y="429" width="198" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -438,8 +438,6 @@ On days air pollution levels are high there are:</string>
         <!--Colour Theme Controller-->
         <scene sceneID="6W4-eL-Sgt">
             <objects>
-                <exit id="rfp-rN-QX5" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zeh-XG-vsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="SD8-Vo-Pvk" customClass="ColourThemeController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DM8-Ly-q1K"/>
@@ -504,6 +502,8 @@ On days air pollution levels are high there are:</string>
                         <outlet property="backgroundImage" destination="gXr-Oj-hde" id="Q2U-14-oF2"/>
                     </connections>
                 </viewController>
+                <exit id="rfp-rN-QX5" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zeh-XG-vsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-865" y="-1898"/>
         </scene>
