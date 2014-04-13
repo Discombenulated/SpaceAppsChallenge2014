@@ -256,3 +256,59 @@ h4.explore-snag .btn {
 	border-bottom:3px solid #7f8c8d;
 	padding:3px 6px;
 }
+
+.snaps {
+	overflow-y:scroll;
+	height:300px;
+	padding-top:10px;
+}
+
+.snaps .snap {
+	margin-bottom:10px;
+}
+
+.snaps .snap img {
+	width:140px;
+	height:140px;
+	margin-bottom:7px;
+}
+
+.snaps .snap .about {
+	float:left;
+	font-size:0.8em;
+}
+
+.filter-item {
+	float:left;
+	margin-right:10px;
+}
+
+.classification {
+	display:inline-block;
+	background-size:15px auto;
+	background-repeat:no-repeat;
+	background-position:top left;
+	padding-left:22px;
+	margin-right:6px;
+	height:15px;
+}
+
+.classification.dark-blue {
+	background-image:url('/images/colours/dark-blue.png');
+}
+
+.classification.light-blue {
+	background-image:url('/images/colours/light-blue.png');
+}
+
+.classification.orange {
+	background-image:url('/images/colours/orange.png');
+}
+
+.classification.pale-blue {
+	background-image:url('/images/colours/pale-blue.png');
+}
+
+.classification a {
+	color:#333;
+}

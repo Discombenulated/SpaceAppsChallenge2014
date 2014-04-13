@@ -31,6 +31,8 @@ function setupImages() {
 	  		  size: new google.maps.Size(10, 10),
 	  			scaledSize: new google.maps.Size(10, 10)
 	  		};
+	
+	$(".range input").datepicker();
 }
 
 function zoom_changed(map) {
