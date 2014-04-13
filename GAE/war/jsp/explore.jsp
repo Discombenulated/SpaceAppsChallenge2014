@@ -86,6 +86,10 @@
 		<input type="text" class="form-control" placeholder="When" />
 	</div>
 	
+	<div class="filter-item button">
+		<button class="btn btn-primary">Filter</button>
+	</div>
+	
 	<div class="clearfix"></div>
 	</div>
 	
