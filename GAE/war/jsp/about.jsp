@@ -10,7 +10,7 @@
 	<jsp:param value="about-page" name="header-class"/>
 </jsp:include>
 
-<div class="col-md-9">
+<div class="col-md-8">
 	<h2>About Sky Snapper</h2>
 	<p>
 		Sky Snapper was built as part of the 2014 Space Apps Challenge by a team of 4 people from <a href="http://www.paconsulting.com/" target="_blank">PA Consulting</a>.
@@ -26,6 +26,16 @@
 		Projects are in the categories of Earth Watch, Technology in Space, Human Spaceflight, Robotics and Asteroids.<br />
 		The challenge is based around the principles of transparency, participation and collaboration, by using openly available data supplied through NASA missions and technologies.
 	</p>
+</div>
+<div class="col-md-4">
+	<h2>About the team</h2>
+	<p>The team who built Sky Snapper is from <a href="http://paconsulting.com/" target="_blank">PA Consulting</a>. There are 4 of us:
+	<ul>
+		<li><strong>Ben Noble</strong>, iOS development</li>
+		<li><strong>David Stanton</strong>, iOS development</li>
+		<li><strong>James Shepherd</strong>, Java & Google App Engine</li>
+		<li><strong>George Buckingham</strong>, Web development</li>
+	</ul>
 </div>
 
 <jsp:include page="<%= JSPs.FOOTER %>"></jsp:include>
