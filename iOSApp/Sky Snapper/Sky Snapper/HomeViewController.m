@@ -86,9 +86,7 @@ UIImage* chosenImage = nil;
     
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Learning_iPhone" bundle:nil];
     UIViewController* initialHelpView = [storyboard instantiateInitialViewController];
-    
-    initialHelpView.modalPresentationStyle = UIModalPresentationFormSheet;
-    [self presentModalViewController:initialHelpView animated:YES];
+    [self.navigationController pushViewController:initialHelpView animated:YES];
 }
 
 @end

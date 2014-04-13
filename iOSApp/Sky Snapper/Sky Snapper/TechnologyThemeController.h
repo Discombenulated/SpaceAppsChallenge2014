@@ -9,5 +9,5 @@
 #import "BaseAnimatedViewController.h"
 
 @interface TechnologyThemeController : BaseAnimatedViewController
-
+-(IBAction) unwindToTechnologyController: (UIStoryboardSegue*)unwindSegue;
 @end

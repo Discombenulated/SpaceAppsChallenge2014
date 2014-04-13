@@ -9,5 +9,5 @@
 #import "BaseAnimatedViewController.h"
 
 @interface PollutionThemeController : BaseAnimatedViewController
-
+-(IBAction) unwindToPollutionController: (UIStoryboardSegue*)unwindSegue;
 @end
