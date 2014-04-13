@@ -72,8 +72,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/queue/photoupload</url-pattern>
 	</servlet-mapping>
 
-
-
 	<welcome-file-list>
 		<welcome-file>home</welcome-file>
 	</welcome-file-list>
