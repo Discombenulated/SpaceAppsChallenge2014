@@ -11,5 +11,6 @@
 
 @interface ThemeController : BaseAnimatedViewController
 @property (nonatomic,strong) IBOutlet UIButton *ButtonClick;
+-(IBAction) unwindToThemeController: (UIStoryboardSegue*)unwindSegue;
 
 @end

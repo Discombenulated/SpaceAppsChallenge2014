@@ -39,6 +39,10 @@
     [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
+-(IBAction) unwindToColourController:(UIStoryboardSegue*)unwindSegue {
+    NSLog(@"Unwound");
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -10,5 +10,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ColourThemeController : BaseAnimatedViewController
-
+-(IBAction) unwindToColourController: (UIStoryboardSegue*)unwindSegue;
 @end
