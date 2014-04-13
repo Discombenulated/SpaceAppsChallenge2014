@@ -12,6 +12,27 @@ $(document).ready(function() {
 	
 });
 
+function setupImages() {
+	window.coloursbase = "/images/colours/";
+	window.orangeImage = {
+			  url: coloursbase + "orange.png",
+	  		  size: new google.maps.Size(10, 10),
+	  			scaledSize: new google.maps.Size(10, 10)
+	  		};
+
+	window.darkBlueImage = {
+			  url: coloursbase + "dark-blue.png",
+			  size: new google.maps.Size(10, 10),
+				scaledSize: new google.maps.Size(10, 10)
+			};
+
+	window.paleBlueImage =  {
+			  url: coloursbase + "pale-blue.png",
+	  		  size: new google.maps.Size(10, 10),
+	  			scaledSize: new google.maps.Size(10, 10)
+	  		};
+}
+
 function zoom_changed(map) {
 	
 	console.log(map.zoomLevel());
@@ -35,23 +56,5 @@ Marker.prototype.setMap = function(map) {
 }
 
 Marker.prototype.remove = function() {
-	tihs.marker_.setMap(null);
+	this.marker_.setMap(null);
 }
-var coloursbase = "/images/colours/";
-var orangeImage = {
-		  url: coloursbase + "orange.png",
-  		  size: new google.maps.Size(10, 10),
-  			scaledSize: new google.maps.Size(10, 10)
-  		};
-
-var darkBlueImage = {
-		  url: coloursbase + "dark-blue.png",
-		  size: new google.maps.Size(10, 10),
-			scaledSize: new google.maps.Size(10, 10)
-		};
-
-var paleBlueImage =  {
-		  url: coloursbase + "pale-blue.png",
-  		  size: new google.maps.Size(10, 10),
-  			scaledSize: new google.maps.Size(10, 10)
-  		};
