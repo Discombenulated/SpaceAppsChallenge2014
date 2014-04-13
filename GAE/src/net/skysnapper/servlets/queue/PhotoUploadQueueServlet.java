@@ -40,20 +40,31 @@ public class PhotoUploadQueueServlet extends HttpServlet {
 			LOGGER.info(keyString);
 			PhotoPost photo = snapperService.getPhoto(keyString);
 			
-			if (null != photo) {
+			if (null != photo && snapperService.isOnAppSpot()) {
 				Image originalImage = ImagesServiceFactory.makeImageFromFilename(photo.getFilename());
 				ImagesService imagesService = ImagesServiceFactory.getImagesService();
 				Transform resize = ImagesServiceFactory.makeCrop(0.33, 0.33, 0.66, 0.66);
 				
 				Image croppedImage = imagesService.applyTransform(resize, originalImage); 
-				byte[] imageData = croppedImage.getImageData();
-
-				int h = croppedImage.getHeight();
-				int w = croppedImage.getWidth();
 				
-				LOGGER.info("h:" + h + " w:" + w + " " + (h*w*3) + "=" + imageData.length);
+				int[][] hist = imagesService.histogram(croppedImage);
+				int[] average = new int[3];
 				
-				LOGGER.info("Processed photo: " + keyString);
+				for (int i = 0; i < 3; i++) {
+					long sum = 0;
+					for (int j = 0; j < 256; j++) {
+						sum += hist[i][j];
+					}
+					average[i] = (int) sum / 256;
+				}
+				
+				photo.setAverageR(average[0]);
+				photo.setAverageG(average[1]);
+				photo.setAverageB(average[2]);
+				
+				snapperService.savePhoto(photo);
+				
+				LOGGER.info("Processed photo: " + keyString + " average RGB: " + average[0] + "," + average[1] + "," + average[2]);
 				return;
 			}
 		}
