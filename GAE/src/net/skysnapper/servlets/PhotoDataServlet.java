@@ -42,7 +42,8 @@ public class PhotoDataServlet extends HttpServlet {
 			
 			if (null != photo) {
 				obj.put("id", photo.getId());
-				obj.put("takenTimestamp", photo.getTakenTimestamp());
+				obj.put("uploadedTimestamp", null != photo.getUploadTimestamp() ? photo.getUploadTimestamp().getTime() : null);
+				obj.put("takenTimestamp", null != photo.getTakenTimestamp() ? photo.getTakenTimestamp().getTime() : null);
 				obj.put("lat", photo.getLat());
 				obj.put("lon", photo.getLon());
 				obj.put("compassDegrees", photo.getCompassDegrees());
