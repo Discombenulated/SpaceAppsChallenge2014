@@ -21,6 +21,10 @@ public interface Constants {
 	public interface ParamNames {
 		public static final String PHOTO_KEY = "photoid";
 	}
+	
+	public interface Attributes {
+		public static final String PHOTOS_LIST = "photoslist";
+	}
 
 	public static final String GCS_BUCKET = "sky-snapper.appspot.com";
 	

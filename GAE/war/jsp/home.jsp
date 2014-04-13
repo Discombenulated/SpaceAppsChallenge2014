@@ -1,4 +1,7 @@
+<%@page import="net.skysnapper.entity.PhotoPost"%>
+<%@page import="static net.skysnapper.util.StringUtils.*"%>
 <%@page language="java" pageEncoding="ISO-8859-1" %>
+<%@page import="net.skysnapper.util.Constants"%>
 <%@page import="net.skysnapper.util.Page"%>
 <%@page import="net.skysnapper.util.JSPs"%>
 <jsp:include page="<%= JSPs.START %>"></jsp:include>
@@ -83,7 +86,7 @@
 		
 		<h3>What is SkySnapper?</h3>
 		<p>Sky Snapper is on a mission to track air pollution around the world and to do that we need your help.</p>
-		<p> You can get involved by -
+		<p> You can get involved by -</p>
 		<p>
 			<dl class="what-to-do">
 				<dt><a href="/jsp/upload_photo.jsp">Uploading your images</a> on the site.</dt>
@@ -103,17 +106,13 @@
 <div class="col-md-5">
 	<h2>Recently snapped</h2>
 	<div class="recently-snapped">
-		<div class="recent-snap" data-latitude="49.435985" data-longitude="12.128906">
-			<img class="img-thumbnail recent-snap-img" src="/images/recentsnaps/recentsnap1.jpg "/>
-			<div class="at">at <span class="pre">49.435985, 12.128906</span>. Classification: <a href="#">Dark Blue</a>
+		<% for (PhotoPost photo : (Iterable<PhotoPost>) request.getAttribute(Constants.Attributes.PHOTOS_LIST)) { %>
+		<div class="recent-snap" data-latitude="<%= escape(photo.getLat()) %>" data-longitude="<%= escape(photo.getLon()) %>">
+			<img class="img-thumbnail recent-snap-img" src="<%= escape(photo.getURL()) %>?s=200"/>
+			<div class="at">at <span class="pre"><%= escape(photo.getLat()) %>, <%= escape(photo.getLon()) %></span>. Classification: <a href="#">Dark Blue (<%= escape(photo.getAverageR()) %>, <%= escape(photo.getAverageG()) %>, <%= escape(photo.getAverageB()) %>)</a>
 			</div>
 		</div>
-		
-		<div class="recent-snap" data-latitude="36.945502" data-longitude="-93.691406">
-			<img class="img-thumbnail recent-snap-img" src="/images/recentsnaps/recentsnap2.jpg "/>
-			<div class="at">at <span class="pre">36.945502, -93.691406</span>. Classification: <a href="#">Dark Blue</a>
-			</div>
-		</div>
+		<% } %>
 	</div>
 	
 	<br /><br />
