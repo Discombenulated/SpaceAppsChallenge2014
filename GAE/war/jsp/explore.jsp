@@ -97,7 +97,7 @@
 			</div>
 			<div class="row">
 			<div class="about">
-				Classification: <span class="classification dark-blue">dark blue</span>
+				<span class="classification dark-blue">dark blue</span>
 			</div>
 			</div>
 		</div>
@@ -108,7 +108,7 @@
 			</div>
 			<div class="row">
 			<div class="about">
-				Classification: <span class="classification orange">orange</span>
+				<span class="classification orange">orange</span>
 			</div>
 			</div>
 		</div>
@@ -118,7 +118,7 @@
 			</div>
 			<div class="row">
 			<div class="about">
-				Classification: <span class="classification dark-blue">dark blue</span>
+				<span class="classification dark-blue">dark blue</span>
 			</div>
 			</div>
 		</div>
