@@ -30,11 +30,10 @@ if (request.getParameter("header-class") != null) {
 			<li class="<%= (request.getServletPath().contains("/upload")) ? "active" : "" %>"><a href="/jsp/upload_photo.jsp">Upload</a></li>
             <li class="<%= (request.getServletPath().contains("/explore")) ? "active" : "" %>"><a href="/jsp/explore.jsp">Interactive Map</a></li>
             <li class="<%= (request.getServletPath().contains("/colours")) ? "active" : "" %>"><a href="/colours">Sky Zone</a>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>            
+            <li class="<%= (request.getServletPath().contains("/about")) ? "active" : "" %>"><a href="/jsp/about.jsp">About</a></li>        
           </ul>
           <ul class="nav navbar-nav navbar-right">
-          <li class="action-button"><a href="/jsp/app.jsp">The App</a></li>
+          <!-- <li class="action-button"><a href="/jsp/app.jsp">The App</a></li> -->
           <li class="call-to-action"><a href="/jsp/developers.jsp">For Developers</a></li>
           </ul>
         </div><!--/.nav-collapse -->
