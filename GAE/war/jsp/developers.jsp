@@ -3,7 +3,7 @@
 <%@page import="net.skysnapper.util.JSPs"%>
 
 <jsp:include page="<%= JSPs.START %>"></jsp:include>
-<%= Page.title("Colours of the sky") %>
+<%= Page.title("Developers") %>
 
 <jsp:include page="<%= JSPs.END %>"></jsp:include>
 <jsp:include page="<%= JSPs.CONTENT_START %>">
@@ -32,7 +32,7 @@
 	</div>
 </div>
 <div class="col-md-9">
-	<h2 class="pull-up">SkySnapper for Developers</h2>
+	<h2 class="pull-up">Sky Snapper for Developers (Coming soon)</h2>
 </div>
 
 

@@ -37,14 +37,17 @@ NSTimer* backgroundAnimationTimer;
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     backgroundAnimationTimer = [NSTimer scheduledTimerWithTimeInterval:0.05f target:self selector:@selector(animateBackground) userInfo:nil repeats:true];
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [backgroundAnimationTimer invalidate];
     backgroundAnimationTimer = nil;
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
-
 
 -(void) animateBackground {
     //NSLog(@"Moving");
