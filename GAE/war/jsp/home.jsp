@@ -99,7 +99,7 @@
 		<h3>Get involved</h3>
 		<p>
 			<a href="#" class="appstore-link" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png) no-repeat;width:135px;height:40px;@media only screen{background-image:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg);}"></a>
-			<a href="#" class="btn btn-default btn-skysnapper">Developer Guide</a>
+			<a href="/jsp/developers.jsp" class="btn btn-default btn-skysnapper">Developer Guide</a>
 		</p>
 </div>
 

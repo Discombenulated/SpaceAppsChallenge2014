@@ -3,7 +3,7 @@
 <%@page import="net.skysnapper.util.JSPs"%>
 
 <jsp:include page="<%= JSPs.START %>"></jsp:include>
-<%= Page.title("Colours of the sky") %>
+<%= Page.title("Explore the sky") %>
 <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV62aeCEjJHb6dqhaswm7dLEB3-r2Gsr0&sensor=false">
     </script>
