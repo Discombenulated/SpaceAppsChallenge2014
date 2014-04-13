@@ -77,16 +77,18 @@
 <jsp:include page="<%= JSPs.CONTENT_START %>"></jsp:include>
 
 <div class="col-md-7 edge">
-		<h2>Sky colour worldwide snapshot</h2>
+		<h2>Sky Snaps Worldwide</h2>
 		<div id="map-canvas" class=" homepage-map"></div>
-		<h4 class="explore-snag">Looks interesting? Why not go and <a href="/jsp/explore.jsp" class="btn btn-explore">explore</a>?</h4>
+		<h4 class="explore-snag">Want to see more? Explore our <a href="/jsp/explore.jsp" class="">interactive map</a>!</h4>
 		
-		<h3>What is SkySnapper? <small>Crowd-sourcing Climate Change</small></h3>
+		<h3>What is SkySnapper?</h3>
+		<p>Sky Snapper is on a mission to track air pollution around the world and to do that we need your help.</p>
+		<p> You can get involved by -
 		<p>
 			<dl class="what-to-do">
-				<dt>Take a picture of the sky with our <a href="#">app</a></dt>
-				<dt>We analyse the image for signs of air pollution</dt>
-				<dt>Your snaps help us gather data to beat climate change</dt>
+				<dt><a href="#">Tweeting your sky snaps</a> to us.</dt>
+				<dt>Using <a href="#">our app</a> to snap a picture of the sky.</dt>
+				<dt>Building your own Sky Snapper stations with our <a href="#">developer tools</a>.</dt>
 			</dl>
 		</p>
 		
@@ -112,6 +114,10 @@
 			</div>
 		</div>
 	</div>
+	
+	<br /><br />
+	<a class="twitter-timeline"  href="https://twitter.com/SkySnapper"  data-widget-id="455200384089194497">Tweets by @SkySnapper</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 
 <script type="text/javascript">
