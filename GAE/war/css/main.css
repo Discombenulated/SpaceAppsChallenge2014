@@ -257,13 +257,14 @@ h4.explore-snag .btn {
 .filter {
 	background:#ecf0f1;
 	border-bottom:3px solid #7f8c8d;
-	padding:3px 6px;
+	padding:6px 6px;
 }
 
 .snaps {
 	overflow-y:scroll;
-	height:300px;
 	padding-top:10px;
+	padding:none;
+	height:300px;
 }
 
 .snaps .snap {

@@ -122,6 +122,76 @@
 			</div>
 			</div>
 		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				<span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
 	</div>
 </div>
 

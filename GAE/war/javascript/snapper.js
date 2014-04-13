@@ -5,7 +5,11 @@ $(document).ready(function() {
 	    }
 	});
 	if ($("#explore-maps-canvas").length > 0) {
-		$("#explore-maps-canvas").height($(document).height() - $("#explore-maps-canvas").offset().top - 5);
+		$("#explore-maps-canvas").height($(window).height() - $("#explore-maps-canvas").offset().top - 5);
+	}
+	
+	if ($(".snaps").length > 0) {
+		$(".snaps").height($("#explore-maps-canvas").height() - 60);
 	}
 	
 	window.markers = [];
@@ -16,7 +20,7 @@ function setupImages() {
 	window.coloursbase = "/images/colours/";
 	window.orangeImage = {
 			  url: coloursbase + "orange.png",
-	  		  size: new google.maps.Size(10, 10),
+	  	 	  size: new google.maps.Size(10, 10),
 	  			scaledSize: new google.maps.Size(10, 10)
 	  		};
 
