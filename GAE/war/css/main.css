@@ -250,3 +250,9 @@ h4.explore-snag .btn {
 	border:1px solid #e74c3c;
 	color:#e74c3c;
 }
+
+.filter {
+	background:#ecf0f1;
+	border-bottom:3px solid #7f8c8d;
+	padding:3px 6px;
+}
