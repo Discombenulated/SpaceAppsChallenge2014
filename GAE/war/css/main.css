@@ -75,12 +75,12 @@ h1 a, h1 a:hover, h1 a:link {
 
 .header-section .navbar-nav li.call-to-action {
 	background:#2ecc71;
-	border-color:white;
+	border-color:#073b1d;
 }
 
 .header-section .navbar-nav li.action-button {
 	background:#e74c3c;
-	border-color:white;
+	border-color:#3d0601;
 }
 
 .header-section .navbar-nav li.active>a:link, .header-section .navbar-nav li.active>a, .header-section .navbar-nav li.active>a:hover {
@@ -249,4 +249,66 @@ h4.explore-snag {
 h4.explore-snag .btn {
 	border:1px solid #e74c3c;
 	color:#e74c3c;
+}
+
+.filter {
+	background:#ecf0f1;
+	border-bottom:3px solid #7f8c8d;
+	padding:3px 6px;
+}
+
+.snaps {
+	overflow-y:scroll;
+	height:300px;
+	padding-top:10px;
+}
+
+.snaps .snap {
+	margin-bottom:10px;
+}
+
+.snaps .snap img {
+	width:140px;
+	height:140px;
+	margin-bottom:7px;
+}
+
+.snaps .snap .about {
+	float:left;
+	font-size:0.8em;
+}
+
+.filter-item {
+	float:left;
+	margin-right:10px;
+}
+
+.classification {
+	display:inline-block;
+	background-size:15px auto;
+	background-repeat:no-repeat;
+	background-position:top left;
+	padding-left:22px;
+	margin-right:6px;
+	height:15px;
+}
+
+.classification.dark-blue {
+	background-image:url('/images/colours/dark-blue.png');
+}
+
+.classification.light-blue {
+	background-image:url('/images/colours/light-blue.png');
+}
+
+.classification.orange {
+	background-image:url('/images/colours/orange.png');
+}
+
+.classification.pale-blue {
+	background-image:url('/images/colours/pale-blue.png');
+}
+
+.classification a {
+	color:#333;
 }

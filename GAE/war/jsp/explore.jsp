@@ -9,8 +9,6 @@
     </script>
     <script type="text/javascript">
     
-    var overlay = null;
-    SnapperOverlay.prototype = new google.maps.OverlayView();
     window.map = null;
     window.marker_hover = null;
       function initialize() {
@@ -20,75 +18,16 @@
         };
         window.map = new google.maps.Map(document.getElementById("explore-maps-canvas"),
             mapOptions);
-        var srcImage = "http://localhost:8888/images/maps-overlay.png";
         
         
         google.maps.event.addListener(map, 'tilesloaded', function() {
-        	var swBound = new google.maps.LatLng(-45.525592, -120.410156);
-        	  var neBound = new google.maps.LatLng(75.361729, 171.210938);
-        	  var bounds = new google.maps.LatLngBounds(swBound, neBound);
-        	  bounds = map.getBounds();
-        	  if (null == overlay) {
-        		overlay = new SnapperOverlay(bounds, srcImage, map);
-        		}
+        	
          });
+        google.maps.event.addListener(map, 'zoom_changed', function() {
+            zoom_changed(map);
+          });
       }
       google.maps.event.addDomListener(window, 'load', initialize);
-      
-      
-      function SnapperOverlay(bounds, image, map) {
-    	  this.bounds_ = bounds;
-    	  this.image_ = image;
-    	  this.map_ = map;
-    	  
-    	  this.div_ = null;
-    	  this.setMap(map);
-      }
-      
-      SnapperOverlay.prototype.onAdd = function() {
-    	  if (null != this.div_) {
-    	  	document.removeChild(this.div_);
-    	  }
-    	  var div = document.createElement('div');
-    	  div.style.borderStyle = 'none';
-    	  div.style.borderWidth = '0px';
-    	  div.style.position = 'absolute';
-
-    	  // Create the img element and attach it to the div.
-    	  var img = document.createElement('img');
-    	  img.src = this.image_;
-    	  img.style.width = '100%';
-    	  img.style.height = '100%';
-    	  img.style.position = 'absolute';
-    	  div.appendChild(img);
-
-    	  this.div_ = div;
-
-    	  // Add the element to the "overlayLayer" pane.
-    	  var panes = this.getPanes();
-    	  panes.overlayLayer.appendChild(div);
-    	};
-    	
-    	SnapperOverlay.prototype.draw = function() {
-
-    		  // We use the south-west and north-east
-    		  // coordinates of the overlay to peg it to the correct position and size.
-    		  // To do this, we need to retrieve the projection from the overlay.
-    		  var overlayProjection = this.getProjection();
-
-    		  // Retrieve the south-west and north-east coordinates of this overlay
-    		  // in LatLngs and convert them to pixel coordinates.
-    		  // We'll use these coordinates to resize the div.
-    		  var sw = overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());
-    		  var ne = overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());
-
-    		  // Resize the image's div to fit the indicated dimensions.
-    		  var div = this.div_;
-    		  div.style.left = sw.x + 'px';
-    		  div.style.top = ne.y + 'px';
-    		  div.style.width = (ne.x - sw.x) + 'px';
-    		  div.style.height = (sw.y - ne.y) + 'px';
-    		};
       
 </script>
 
@@ -98,7 +37,7 @@
 </jsp:include>
 
 <div class="col-md-12">
-	<h2 style="text-align:center;" class="sky-beautiful">The sky is beautiful. Explore it.</h2>
+	<h2 class="sky-beautiful">Interactive Map <small>The sky is beautiful. Explore it.</small> (coming soon)</h2>
 </div>
 
 <div class="col-md-7">
@@ -108,10 +47,10 @@
 </div>
 
 <div class="col-md-5">
-	<div class="">
-		<div class="dropdown">
-    <a class="dropdown-toggle btn" data-toggle="dropdown" href="#">
-        Sky colour
+	<div class="filter">
+		<div class="dropdown filter-item">
+    <a class="dropdown-toggle btn btn-default" data-toggle="dropdown" href="#">
+        Colour
         <b class="caret"></b>
     </a>
     <ul class="dropdown-menu dropdown-menu-form" role="menu">
@@ -140,7 +79,49 @@
             </label>
         </li>
     </ul>
-</div>
+    
+	</div>
+	
+	<div class="filter-item range">
+		<input type="text" class="form-control" placeholder="When" />
+	</div>
+	
+	<div class="clearfix"></div>
+	</div>
+	
+	<div class="snaps">
+
+		<div class="snap col-md-4" id="snap1">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				Classification: <span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
+		
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				Classification: <span class="classification orange">orange</span>
+			</div>
+			</div>
+		</div>
+		<div class="snap col-md-4">
+			<div class="row">
+			<img class="img-thumbnail" src="http://placehold.it/200x200">
+			</div>
+			<div class="row">
+			<div class="about">
+				Classification: <span class="classification dark-blue">dark blue</span>
+			</div>
+			</div>
+		</div>
 	</div>
 </div>
 

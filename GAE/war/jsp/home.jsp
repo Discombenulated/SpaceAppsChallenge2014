@@ -1,4 +1,7 @@
+<%@page import="net.skysnapper.entity.PhotoPost"%>
+<%@page import="static net.skysnapper.util.StringUtils.*"%>
 <%@page language="java" pageEncoding="ISO-8859-1" %>
+<%@page import="net.skysnapper.util.Constants"%>
 <%@page import="net.skysnapper.util.Page"%>
 <%@page import="net.skysnapper.util.JSPs"%>
 <jsp:include page="<%= JSPs.START %>"></jsp:include>
@@ -77,16 +80,19 @@
 <jsp:include page="<%= JSPs.CONTENT_START %>"></jsp:include>
 
 <div class="col-md-7 edge">
-		<h2>Sky colour worldwide snapshot</h2>
+		<h2>Sky Snaps Worldwide</h2>
 		<div id="map-canvas" class=" homepage-map"></div>
-		<h4 class="explore-snag">Looks interesting? Why not go and <a href="/jsp/explore.jsp" class="btn btn-explore">explore</a>?</h4>
+		<h4 class="explore-snag">Want to see more? Explore our <a href="/jsp/explore.jsp" class="">interactive map</a>!</h4>
 		
-		<h3>What is SkySnapper? <small>Crowd-sourcing Climate Change</small></h3>
+		<h3>What is SkySnapper?</h3>
+		<p>Sky Snapper is on a mission to track air pollution around the world and to do that we need your help.</p>
+		<p> You can get involved by -</p>
 		<p>
 			<dl class="what-to-do">
-				<dt>Take a picture of the sky with our <a href="#">app</a></dt>
-				<dt>We analyse the image for signs of air pollution</dt>
-				<dt>Your snaps help us gather data to beat climate change</dt>
+				<dt><a href="/jsp/upload_photo.jsp">Uploading your images</a> on the site.</dt>
+				<dt><a href="http://www.twitter.com/skysnapper">Tweeting your sky snaps</a> to us.</dt>
+				<dt>Using <a href="#">our app</a> to snap a picture of the sky. (Coming soon)</dt>
+				<dt>Building your own Sky Snapper stations with our <a href="/jsp/developers.jsp">developer tools</a>.</dt>
 			</dl>
 		</p>
 		
@@ -100,18 +106,18 @@
 <div class="col-md-5">
 	<h2>Recently snapped</h2>
 	<div class="recently-snapped">
-		<div class="recent-snap" data-latitude="49.435985" data-longitude="12.128906">
-			<img class="img-thumbnail recent-snap-img" src="/images/recentsnaps/recentsnap1.jpg "/>
-			<div class="at">at <span class="pre">49.435985, 12.128906</span>. Classification: <a href="#">Dark Blue</a>
+		<% for (PhotoPost photo : (Iterable<PhotoPost>) request.getAttribute(Constants.Attributes.PHOTOS_LIST)) { %>
+		<div class="recent-snap" data-latitude="<%= escape(photo.getLat()) %>" data-longitude="<%= escape(photo.getLon()) %>">
+			<img class="img-thumbnail recent-snap-img" src="<%= escape(photo.getURL()) %>?s=200"/>
+			<div class="at">at <span class="pre"><%= escape(photo.getLat()) %>, <%= escape(photo.getLon()) %></span>. Classification: <a href="#">Dark Blue (<%= escape(photo.getAverageR()) %>, <%= escape(photo.getAverageG()) %>, <%= escape(photo.getAverageB()) %>)</a>
 			</div>
 		</div>
-		
-		<div class="recent-snap" data-latitude="36.945502" data-longitude="-93.691406">
-			<img class="img-thumbnail recent-snap-img" src="/images/recentsnaps/recentsnap2.jpg "/>
-			<div class="at">at <span class="pre">36.945502, -93.691406</span>. Classification: <a href="#">Dark Blue</a>
-			</div>
-		</div>
+		<% } %>
 	</div>
+	
+	<br /><br />
+	<a class="twitter-timeline"  href="https://twitter.com/SkySnapper"  data-widget-id="455200384089194497">Tweets by @SkySnapper</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 
 <script type="text/javascript">

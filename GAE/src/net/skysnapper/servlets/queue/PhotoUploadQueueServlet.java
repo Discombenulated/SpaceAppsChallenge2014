@@ -55,7 +55,7 @@ public class PhotoUploadQueueServlet extends HttpServlet {
 					long count = 0;
 					for (int rgbValue = 0; rgbValue < 256; rgbValue++) {
 						count += hist[i][rgbValue];
-						sum = hist[i][rgbValue] * rgbValue;
+						sum += hist[i][rgbValue] * rgbValue;
 					}
 					average[i] = (int) (sum / count);
 				}
