@@ -37,7 +37,7 @@
 </jsp:include>
 
 <div class="col-md-12">
-	<h2 style="text-align:center;" class="sky-beautiful">The sky is beautiful. Explore it.</h2>
+	<h2 class="sky-beautiful">Interactive Map <small>The sky is beautiful. Explore it.</small> (coming soon)</h2>
 </div>
 
 <div class="col-md-7">

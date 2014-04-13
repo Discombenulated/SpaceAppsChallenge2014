@@ -86,8 +86,9 @@
 		<p> You can get involved by -
 		<p>
 			<dl class="what-to-do">
-				<dt><a href="#">Tweeting your sky snaps</a> to us.</dt>
-				<dt>Using <a href="#">our app</a> to snap a picture of the sky.</dt>
+				<dt><a href="/jsp/upload_photo.jsp">Uploading your images</a> on the site.</dt>
+				<dt><a href="http://www.twitter.com/skysnapper">Tweeting your sky snaps</a> to us.</dt>
+				<dt>Using <a href="#">our app</a> to snap a picture of the sky. (Coming soon)</dt>
 				<dt>Building your own Sky Snapper stations with our <a href="/jsp/developers.jsp">developer tools</a>.</dt>
 			</dl>
 		</p>
