@@ -24,8 +24,6 @@
 	<div class="col-md-12">
 		<form action="<%=uploadUrl%>" method="post"
 			enctype="multipart/form-data">
-			<textarea name="title" placeholder="Your title or comment"
-				class="titleTextArea" required></textarea>
 			<input type="file" name="fileName" required> <input
 				class="active btn" type="submit" value="Upload">
 		</form>
@@ -39,8 +37,7 @@
 				%>
 				<div class="row">
 					<div class="col-md-12">
-						<h2 class="title"><%= post.getTitle() %></h2>
-						<h3><%= sdf.format(post.getTimestamp()) %></h3>
+						<h3><%= sdf.format(post.getUploadTimestamp()) %></h3>
 						<h4><%= post.getId() %></h4>
 						<img class="thumbnail" src="<%= post.getURL() %>=s100" />
 					</div>

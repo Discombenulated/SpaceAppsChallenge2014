@@ -10,6 +10,8 @@
 
 #import "ResultViewController.h"
 
+#import "SkySnapperWS.h"
+
 @interface UploadViewController ()
 
 @end
@@ -45,12 +47,25 @@ NSTimer* forwardTimer = nil;
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     self.progressView.progress = 0.0f;
-    forwardTimer = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(forwardToResult) userInfo:nil repeats:YES];
+    //forwardTimer = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(forwardToResult) userInfo:nil repeats:YES];
+    
+    dispatch_queue_t fetchQueue = dispatch_queue_create("photo url", NULL);
+    dispatch_async(fetchQueue, ^{
+        SkySnapperWS* ws = [SkySnapperWS new];
+        //NSString* photoUploadUrl = [ws getUploadUrl];
+        [ws uploadImage:self.uploadImage];
+        //NSLog(@"Photo upload url: %@", photoUploadUrl);
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.progressView.progress = 1.0f;
+            [self forwardToResult];
+        });
+    });
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
-    [forwardTimer invalidate];
-    forwardTimer = nil;
+    //[forwardTimer invalidate];
+    //forwardTimer = nil;
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
 }

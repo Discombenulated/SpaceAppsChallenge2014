@@ -5,6 +5,7 @@ package net.skysnapper.services;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,6 +15,7 @@ import net.sf.jsr107cache.CacheFactory;
 import net.sf.jsr107cache.CacheManager;
 import net.skysnapper.entity.PhotoPost;
 import net.skysnapper.util.Constants;
+import net.skysnapper.util.StringUtils;
 
 import com.google.appengine.api.blobstore.BlobstoreService;
 import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
@@ -58,8 +60,15 @@ public class SnapperService {
 				.iterable();
 	}
 
-	public Key<PhotoPost> createNewPost(String title, String filename) {
-		PhotoPost photoPost = new PhotoPost(title, filename);
+	public Key<PhotoPost> createNewPost(String filename, String takenTimestamp, String lat, String lon, String compassDegrees, String inclinationDegrees) {
+		Date takenDate = null;
+		Long unix = StringUtils.parseLong(takenTimestamp);
+		
+		if (null != unix) {
+			takenDate = new Date(unix);
+		}
+		
+		PhotoPost photoPost = new PhotoPost(filename, takenDate, lat, lon, compassDegrees, inclinationDegrees);
 		return ofy().save().entity(photoPost).now();		
 	}
 	
