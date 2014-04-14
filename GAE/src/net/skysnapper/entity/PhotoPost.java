@@ -45,6 +45,9 @@ public class PhotoPost {
 	Integer paletteR;
 	Integer paletteG;
 	Integer paletteB;
+	String comment;
+	@Index
+	Boolean isModeratorApproved;
 	
 	static ImagesService imagesService = ImagesServiceFactory.getImagesService();
 
@@ -205,5 +208,33 @@ public class PhotoPost {
 	 */
 	public String getLon() {
 		return lon;
+	}
+
+	/**
+	 * @return the comment
+	 */
+	public String getComment() {
+		return comment;
+	}
+
+	/**
+	 * @param theComment the comment to set
+	 */
+	public void setComment(String theComment) {
+		comment = theComment;
+	}
+
+	/**
+	 * @return the isModeratorApproved
+	 */
+	public Boolean getIsModeratorApproved() {
+		return isModeratorApproved;
+	}
+
+	/**
+	 * @param theIsModeratorApproved the isModeratorApproved to set
+	 */
+	public void setIsModeratorApproved(Boolean theIsModeratorApproved) {
+		isModeratorApproved = theIsModeratorApproved;
 	}
 }

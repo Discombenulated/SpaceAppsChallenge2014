@@ -24,6 +24,13 @@ public interface Constants {
 	
 	public interface Attributes {
 		public static final String PHOTOS_LIST = "photoslist";
+		
+		public static final String PHOTO_LIST_COLUMNS = "photolistcolumns";
+	}
+	
+	public interface Paging {
+		public static final String CURRENT_PAGE = "currentpage";
+		public static final String NUM_PAGES = "numpages";
 	}
 
 	public static final String GCS_BUCKET = "sky-snapper.appspot.com";
