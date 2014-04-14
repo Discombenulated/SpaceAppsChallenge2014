@@ -1,9 +1,10 @@
+<%@page language="java" pageEncoding="ISO-8859-1" %>
 <%@page import="net.skysnapper.entity.PhotoPost"%>
 <%@page import="static net.skysnapper.util.StringUtils.*"%>
-<%@page language="java" pageEncoding="ISO-8859-1" %>
 <%@page import="net.skysnapper.util.Constants"%>
 <%@page import="net.skysnapper.util.Page"%>
 <%@page import="net.skysnapper.util.JSPs"%>
+
 <jsp:include page="<%= JSPs.START %>"></jsp:include>
 <%= Page.title("Welcome") %>
 
@@ -73,7 +74,9 @@
       }
       google.maps.event.addDomListener(window, 'load', initialize);
       
-      
+      	$(function(){$('.carousel').carousel({
+    	  interval: 2000
+    	})});
 </script>
 
 <jsp:include page="<%= JSPs.END %>"></jsp:include>
@@ -99,20 +102,32 @@
 		<h3>Get involved</h3>
 		<p>
 			<a href="#" class="appstore-link" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png) no-repeat;width:135px;height:40px;@media only screen{background-image:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg);}"></a>
-			<a href="#" class="btn btn-default btn-skysnapper">Developer Guide</a>
+			<a href="/jsp/developers.jsp" class="btn btn-default btn-skysnapper">Developer Guide</a>
 		</p>
 </div>
 
 <div class="col-md-5">
 	<h2>Recently snapped</h2>
-	<div class="recently-snapped">
-		<% for (PhotoPost photo : (Iterable<PhotoPost>) request.getAttribute(Constants.Attributes.PHOTOS_LIST)) { %>
-		<div class="recent-snap" data-latitude="<%= escape(photo.getLat()) %>" data-longitude="<%= escape(photo.getLon()) %>">
-			<img class="img-thumbnail recent-snap-img" src="<%= escape(photo.getURL()) %>?s=200"/>
-			<div class="at">at <span class="pre"><%= escape(photo.getLat()) %>, <%= escape(photo.getLon()) %></span>. Classification: <a href="#">Dark Blue (<%= escape(photo.getAverageR()) %>, <%= escape(photo.getAverageG()) %>, <%= escape(photo.getAverageB()) %>)</a>
+	<div id="recentSnaps" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+		<%	
+			boolean first = true;
+			String active = "active";
+			for (PhotoPost photo : (Iterable<PhotoPost>) request.getAttribute(Constants.Attributes.PHOTOS_LIST)) {
+				if (first) {
+					first = false;
+				} else {
+					active = "";
+				}
+		%>
+			<div class="item <%= active %>" data-latitude="<%= escape(photo.getLat()) %>" data-longitude="<%= escape(photo.getLon()) %>">
+				<img class="img-thumbnail" src="<%= escape(photo.getURL()) %>=s200-c"/>
+				<!-- <div class="carousel-caption">
+					at <span class="pre"><%= escape(photo.getLat()) %>, <%= escape(photo.getLon()) %></span>. Classification: Dark Blue (<%= escape(photo.getAverageR()) %>, <%= escape(photo.getAverageG()) %>, <%= escape(photo.getAverageB()) %>)
+				</div>  -->
 			</div>
-		</div>
 		<% } %>
+		</div>
 	</div>
 	
 	<br /><br />

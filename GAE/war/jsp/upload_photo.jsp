@@ -12,7 +12,10 @@
 <jsp:include page="<%= JSPs.START %>"></jsp:include>
 <%= Page.title("SkySnapper Upload") %>
 <jsp:include page="<%= JSPs.END %>"></jsp:include>
-<jsp:include page="<%= JSPs.CONTENT_START %>"></jsp:include>
+<jsp:include page="<%= JSPs.CONTENT_START %>">
+	<jsp:param value="upload-page" name="header-class"/>
+
+</jsp:include>
 
 <%
 	SnapperService snapperService = SnapperService.getInstance();

@@ -38,6 +38,14 @@ h1 a, h1 a:hover, h1 a:link {
 	background-image:url('/images/sky5.jpg');
 }
 
+.header-section.upload-page {
+	background-image:url('/images/sky6.jpg');
+}
+
+.header-section.about-page {
+	background-image:url('/images/sky7.jpg');
+}
+
 .header-section .navbar-default {
 	background:none;
 	border:none;
@@ -228,7 +236,6 @@ footer {
 
 #explore-maps-canvas {
 	width:100%;
-	border:1px solid black;
 }
 
 h2.sky-beautiful {
@@ -254,13 +261,14 @@ h4.explore-snag .btn {
 .filter {
 	background:#ecf0f1;
 	border-bottom:3px solid #7f8c8d;
-	padding:3px 6px;
+	padding:6px 6px;
 }
 
 .snaps {
 	overflow-y:scroll;
-	height:300px;
 	padding-top:10px;
+	padding:none;
+	height:300px;
 }
 
 .snaps .snap {
@@ -276,6 +284,7 @@ h4.explore-snag .btn {
 .snaps .snap .about {
 	float:left;
 	font-size:0.8em;
+	
 }
 
 .filter-item {
@@ -291,6 +300,7 @@ h4.explore-snag .btn {
 	padding-left:22px;
 	margin-right:6px;
 	height:15px;
+	margin-left:2px;
 }
 
 .classification.dark-blue {
