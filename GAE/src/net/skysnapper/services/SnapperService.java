@@ -24,6 +24,7 @@ import com.google.appengine.api.memcache.jsr107cache.GCacheFactory;
 import com.google.appengine.api.utils.SystemProperty;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.ObjectifyService;
+import com.googlecode.objectify.Result;
 
 /**
  * @author LONJS43
@@ -54,11 +55,6 @@ public class SnapperService {
 
 		return null;
 	}
-	
-	public Iterable<PhotoPost> getAllImages() {
-		return ofy().load().type(PhotoPost.class).order("-timestamp")
-				.iterable();
-	}
 
 	public Key<PhotoPost> createNewPost(String filename, String takenTimestamp, String lat, String lon, String compassDegrees, String inclinationDegrees) {
 		Date takenDate = null;
@@ -69,7 +65,7 @@ public class SnapperService {
 		}
 		
 		PhotoPost photoPost = new PhotoPost(filename, takenDate, lat, lon, compassDegrees, inclinationDegrees);
-		return ofy().save().entity(photoPost).now();		
+		return savePhoto(photoPost).now();		
 	}
 	
 	public String getPhotoUploadURL() {
@@ -100,12 +96,21 @@ public class SnapperService {
 		return ofy().load().type(PhotoPost.class).id(StringUtils.parseLong(keyString)).now();
 	}
 
-	public void savePhoto(PhotoPost photo) {
-		ofy().save().entity(photo);
+	public Result<Key<PhotoPost>> savePhoto(PhotoPost photo) {
+		return ofy().save().entity(photo);
 	}
 
-	public Iterable<PhotoPost> getLatestPhotos(int count) {
-		return ofy().load().type(PhotoPost.class).order("-timestamp").limit(count)
+	public Iterable<PhotoPost> getLatestModeratedPhotos(int count) {
+		return ofy().load().type(PhotoPost.class).filter("isModeratorApproved", true).order("-timestamp").limit(count)
 				.iterable();
+	}
+	
+	public Iterable<PhotoPost> getPhotos(int startIndex, int count) {
+		return ofy().load().type(PhotoPost.class).order("-timestamp").offset(startIndex).limit(count)
+				.iterable();
+	}
+	
+	public int countPhotos() {
+		return ofy().load().type(PhotoPost.class).count();
 	}
 }

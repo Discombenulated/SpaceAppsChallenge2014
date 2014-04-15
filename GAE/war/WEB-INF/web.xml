@@ -80,8 +80,54 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>photoUploadQueue</servlet-name>
 		<url-pattern>/queue/photoupload</url-pattern>
 	</servlet-mapping>
+	
+	<!--  admin pages -->
+	
+	<servlet>
+		<servlet-name>AdminHome</servlet-name>
+		<servlet-class>net.skysnapper.servlets.admin.HomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminHome</servlet-name>
+		<url-pattern>/admin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdminHome</servlet-name>
+		<url-pattern>/admin/</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdminHome</servlet-name>
+		<url-pattern>/admin/home</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Moderate</servlet-name>
+		<servlet-class>net.skysnapper.servlets.admin.ModerateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Moderate</servlet-name>
+		<url-pattern>/admin/moderate</url-pattern>
+	</servlet-mapping>
+	
+	<!-- End admin pages -->
 
 	<welcome-file-list>
 		<welcome-file>home</welcome-file>
 	</welcome-file-list>
+	
+	
+	<security-constraint>
+		<!-- Prevent access to various parts via anyone not logged into Google 
+			as an admin for this app -->
+		<web-resource-collection>
+			<web-resource-name>Google Admin Only</web-resource-name>
+			<url-pattern>/jsp/admin/*</url-pattern>
+			<url-pattern>/admin</url-pattern>
+			<url-pattern>/admin/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+	
 </web-app>
