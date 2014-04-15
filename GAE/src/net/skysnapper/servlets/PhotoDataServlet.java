@@ -29,9 +29,23 @@ public class PhotoDataServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1051377078676334052L;
 	
-	@SuppressWarnings("unchecked")
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) {
+		doRequest(request, response);
+	}
+
+	@Override
+	public void doPost(HttpServletRequest request, HttpServletResponse response) {
+		doRequest(request, response);
+	}
+	
+	/**
+	 * @param request
+	 * @param response
+	 */
+	@SuppressWarnings("unchecked")
+	private void doRequest(HttpServletRequest request,
+			HttpServletResponse response) {
 		String keyString = request.getParameter(Constants.ParamNames.PHOTO_KEY);
 		JSONObject obj = new JSONObject();
 		

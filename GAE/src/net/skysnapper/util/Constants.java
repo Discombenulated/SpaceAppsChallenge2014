@@ -26,6 +26,8 @@ public interface Constants {
 		public static final String PHOTOS_LIST = "photoslist";
 		
 		public static final String PHOTO_LIST_COLUMNS = "photolistcolumns";
+
+		public static final String PHOTO = "photo";
 	}
 	
 	public interface Paging {
