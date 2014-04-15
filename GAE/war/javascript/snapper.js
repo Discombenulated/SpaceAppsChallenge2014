@@ -1,4 +1,34 @@
-
+function pollForPhotoData() {
+	$('*[data-photoid]').each(function(index, ele){
+		var div = $(ele);
+		var photoid = div.attr('data-photoid');
+		var analysis = $('.analysis');
+		var averageColour = $('.averageColour');
+		
+		$.ajax({
+			type: "POST",
+			url: "/photodata",
+			dataType: "json",
+			async: false,
+			data: {
+				photoid: photoid,
+			},
+			success: function(data) {
+				if (data.averageR + data.averageG + data.averageB > 0) {
+					averageColour.css('background-color', "rgb("+ data.averageR + "," + data.averageG + "," + data.averageB + ")");
+					div.hide();
+					analysis.show();
+				} else {
+					setTimeout(pollForPhotoData, 2000);
+				}
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+				setTimeout(pollForPhotoData, 2000);
+				console.log && console.log(errorThrown);
+			},
+		});
+	});
+}
 
 function setupImages() {
 	window.coloursbase = "/images/colours/";
@@ -87,7 +117,9 @@ $(document).ready(function() {
 	
 	window.markers = [];
 	
-	setupImages();
+	if(window.google) {
+		setupImages();
+	}
 });
 
 function getRandomInRange(from, to, fixed) {

@@ -14,6 +14,8 @@ public interface JSPs {
 	
 	public static final String COLOURS = "/jsp/colours.jsp";
 	
+	public static final String UPLOAD_SUCCESS = "/jsp/upload_success.jsp";
+	
 	public static interface Admin {
 		public static interface Fragments {
 			public static final String NAVBAR = "/jsp/admin/fragments/navbar.jsp";
