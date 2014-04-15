@@ -1,0 +1,27 @@
+JUDGES COMMENTS 
+
+Good problem
+innovative idea
+chosen to have a platform
+scalable
+LOCAL NOMINATION - "Galactic Impact"
+
+
+GLOBAL JUDGING
+Short project description
+30 second video
+Project Page links (must include a link to the code on GitHub)
+Code must be open source
+Judged on 
+- Impact
+- Creativity
+- Product
+- Sustainability
+- Presentation
+
+
+MY THOUGHTS
+Need to build on the "platform" thing - document developer API for uploading images and retrieving data
+Submission to Global needs to comment on the use of Google App Engine for Scalability
+
+

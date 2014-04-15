@@ -25,7 +25,7 @@ public class HomeServlet extends HttpServlet {
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) {
 		try {
-			req.setAttribute(Constants.Attributes.PHOTOS_LIST, snapperService.getLatestPhotos(2));
+			req.setAttribute(Constants.Attributes.PHOTOS_LIST, snapperService.getLatestModeratedPhotos(10));
 			req.getRequestDispatcher(JSPs.HOME).forward(req, resp);
 		} catch (Exception e) {
 			LOGGER.log(Level.WARNING, "HomePage Failed", e);
