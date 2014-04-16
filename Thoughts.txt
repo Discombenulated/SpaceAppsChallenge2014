@@ -25,3 +25,21 @@ Need to build on the "platform" thing - document developer API for uploading ima
 Submission to Global needs to comment on the use of Google App Engine for Scalability
 
 
+
+
+(FN) "Global Air Polition Monitoring network"
+(FN) 
+(DS) On the Cloud, allowing for sustainability
+(FN) Roadmap - "Get key opinion leaders on board"
+(FN) Google Glass
+(BN) Notification to Pebble
+
+sensor networks not working
+"Educate and engage"
+spreading awareness, encouraging changes in behaviour
+"Air pollution, it's in your hands"
+
+
+
+IAWAPATS
+
