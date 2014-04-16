@@ -322,3 +322,14 @@ h4.explore-snag .btn {
 .classification a {
 	color:#333;
 }
+
+.centred {
+	text-align: center;
+}
+
+.averageColour {
+	width: 200px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
